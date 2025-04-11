@@ -1,6 +1,6 @@
 "use client";
 
-import { MyPhoto } from "./images";
+import { MyPhoto } from "../lib/images";
 import { FC, useState } from "react";
 import { MasonryPhotoAlbum } from "react-photo-album";
 import "react-photo-album/masonry.css";
@@ -14,11 +14,18 @@ import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
-export const Gallery: FC<{ images: MyPhoto[] }> = ({ images }: { images: MyPhoto[] }) => {
+import { renderNextImage } from "./GalleryNextImage";
+
+export const Gallery: FC<{ images?: MyPhoto[] }> = ({ images }: { images?: MyPhoto[] }) => {
   const [idx, setIdx] = useState(-1);
 
+  if (typeof images === 'undefined') {
+    return <></>;
+  }
+
   return <>
-    <MasonryPhotoAlbum photos={images} onClick={({ index }) => setIdx(index)} />
+    <MasonryPhotoAlbum photos={images} onClick={({ index }) => setIdx(index)}
+      render={{ image: renderNextImage }} />
     <Lightbox
       slides={images}
       open={idx >= 0}
