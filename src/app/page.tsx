@@ -1,22 +1,11 @@
 import Image from "next/image";
-import { MasonryPhotoAlbum } from "react-photo-album";
-import "react-photo-album/masonry.css";
-
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
-
-// import optional lightbox plugins
-import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
-import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
-import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
-import { useState } from "react";
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 import { MyPhoto } from "./images";
+import { Gallery } from "./Gallery";
 
 // am scris poezii, inclusiv optimiste, în exportul de pe Facebook și silviubogan.com
 
@@ -28,11 +17,6 @@ export default function Home({ images: { poze, desene, screenshot, deseneOrigina
     deseneOriginale: MyPhoto[];
   }
 }) {
-  const [index, setIndex] = useState(-1);
-  const [indexDesen, setIndexDesen] = useState(-1);
-  const [screenshotIndex, setScreenshotIndex] = useState(-1);
-  const [desenOriginalIndex, setDesenOriginalIndex] = useState(-1);
-
   return <main>
     <h1>Portofoliu: Silviu Bogan</h1>
     <Image src="avatar.jpg" width={250} height={150} alt="avatar" />
@@ -57,58 +41,22 @@ export default function Home({ images: { poze, desene, screenshot, deseneOrigina
       </li>
       <li>
         5.
-        <MasonryPhotoAlbum photos={screenshot} onClick={({ index }) => setScreenshotIndex(index)} />
-
-        <Lightbox
-          slides={screenshot}
-          open={screenshotIndex >= 0}
-          index={screenshotIndex}
-          close={() => setScreenshotIndex(-1)}
-          // enable optional lightbox plugins
-          plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
-        />
+        <Gallery images={screenshot} />
         <p>
           Am realizat în Electron <a href="https://github.com/silviubogan/reminder-to-see">un program</a> testat pe Linux și Windows care pune periodic utilizatorul să facă clic pentru a continua, evitând orbecăirea.
         </p>
       </li>
       <li>
         6. Am realizat în WPF un joc educațional de tip blocuri de memorie:
-        <MasonryPhotoAlbum photos={poze} onClick={({ index }) => setIndex(index)} />
-
-        <Lightbox
-          slides={poze}
-          open={index >= 0}
-          index={index}
-          close={() => setIndex(-1)}
-          // enable optional lightbox plugins
-          plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
-        />
+        <Gallery images={poze} />
       </li>
       <li>
         7. Am realizat copii ale unor desene:
-        <MasonryPhotoAlbum photos={desene} onClick={({ index }) => setIndexDesen(index)} />
-
-        <Lightbox
-          slides={desene}
-          open={indexDesen >= 0}
-          index={indexDesen}
-          close={() => setIndexDesen(-1)}
-          // enable optional lightbox plugins
-          plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
-        />
+        <Gallery images={desene} />
       </li>
       <li>
         8. Am realizat desene digitale:
-        <MasonryPhotoAlbum photos={deseneOriginale} onClick={({ index }) => setDesenOriginalIndex(index)} />
-
-        <Lightbox
-          slides={deseneOriginale}
-          open={desenOriginalIndex >= 0}
-          index={desenOriginalIndex}
-          close={() => setDesenOriginalIndex(-1)}
-          // enable optional lightbox plugins
-          plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
-        />
+        <Gallery images={deseneOriginale} />
       </li>
     </ol>
     <p>
@@ -123,7 +71,7 @@ import imageSizeFromFile from 'image-size';
 export const revalidate = 60;
 export const dynamicParams = true;
 
-export const generateStaticParams = async (/* context */) => {
+export const getStaticProps = async (/* context */) => {
   const fill = async (x: MyPhoto) => {
     const d = await imageSizeFromFile(Uint8Array.from(x.src));
     x.width = d.width;
@@ -140,11 +88,13 @@ export const generateStaticParams = async (/* context */) => {
   };
 
   return {
-    images: {
-      poze: await map(poze),
-      desene: await map(desene),
-      screenshot: await map(screenshot),
-      deseneOriginale: await map(deseneOriginale)
-    }
+    props: {
+      images: {
+        poze: await map(poze),
+        desene: await map(desene),
+        screenshot: await map(screenshot),
+        deseneOriginale: await map(deseneOriginale),
+      },
+    },
   };
 };
