@@ -1,5 +1,3 @@
-"use server";
-
 import { getImages } from "@/lib/imageSizes";
 import { MegaHome } from "./Home";
 

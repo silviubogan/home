@@ -7,7 +7,6 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 import { Gallery } from "@/components/Gallery";
-// import { use, useEffect, useMemo, useState } from "react";
 import { MyPhoto } from "@/lib/images";
 
 type MyImages = { poze?: MyPhoto[], screenshot?: MyPhoto[], desene?: MyPhoto[], deseneOriginale?: MyPhoto[] };
