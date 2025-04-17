@@ -152,6 +152,16 @@ export const deseneManualeOriginale: MyPhoto[] = [
         width: 1000,
         height: 600,
     },
+    {
+        src: "https://i.imgur.com/OBIJxTY.jpeg",
+        width: 1000,
+        height: 600,
+    },
+    {
+        src: "https://i.imgur.com/L1esgq4.jpeg",
+        width: 0,
+        height: 0,
+    },
 ];
 
 export type MyPhoto = { src: string, width: number, height: number, alt?: string };

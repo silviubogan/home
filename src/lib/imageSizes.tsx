@@ -1,9 +1,16 @@
 import { MyPhoto, poze, deseneManualeCopii, screenshot, deseneDigitaleOriginale, deseneManualeOriginale } from '@/lib/images';
 import { imageSizeFromFile } from 'image-size/fromFile';
+import { imageSize } from 'image-size';
 
-export const getImages = async (/* context */) => {
+async function imageSizeFromUrl(imgUrl: string): Promise<Omit<MyPhoto, "src">> {
+    const f = await fetch(imgUrl);
+    const c = await imageSize(new Uint8Array(await f.arrayBuffer()));
+    return { width: c.width, height: c.height };
+}
+
+export const getImages = async () => {
     const fill = async (x: MyPhoto) => {
-        const path = x.src.startsWith("https://") ? x.src : "public/" + x.src;
+        const path = "public/" + x.src;
         const d = await imageSizeFromFile(path);
         x.width = d.width;
         x.height = d.height;
@@ -12,13 +19,30 @@ export const getImages = async (/* context */) => {
 
     const map = async (arr: MyPhoto[]) => {
         const arr2: Promise<MyPhoto>[] = [];
+        const subpromises: Promise<MyPhoto>[] = [];
         arr.forEach((e) => {
-            if (e.src.startsWith("https://")) {
-                arr2.push(new Promise((resolve) => resolve(e)));
-                return;
+            if (e.src.startsWith("https://") || e.src.startsWith("http://")) {
+                const i = imageSizeFromUrl(e.src);
+                const p = i.then(async (s) => {
+                    const pp = new Promise<MyPhoto>((resolve) => {
+                        resolve({
+                            src: e.src,
+                            width: s.width,
+                            height: s.height,
+                        });
+                    });
+                    arr2.push(pp);
+                    return await pp;
+                }, (reason) => {
+                    throw new Error(reason);
+                });
+                subpromises.push(p);
+            } else {
+                arr2.push(fill(e));
             }
-            arr2.push(fill(e));
         });
+
+        await Promise.all<Promise<MyPhoto>>(subpromises);
         const arr3 = await Promise.all(arr2);
         return arr3;
     };
