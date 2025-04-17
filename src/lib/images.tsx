@@ -155,3 +155,5 @@ export const deseneManualeOriginale: MyPhoto[] = [
 ];
 
 export type MyPhoto = { src: string, width: number, height: number, alt?: string };
+export type MyImages = { poze?: MyPhoto[], deseneManualeCopii: MyPhoto[], screenshot?: MyPhoto[],
+    desene?: MyPhoto[], deseneDigitaleOriginale?: MyPhoto[], deseneManualeOriginale: MyPhoto[] };

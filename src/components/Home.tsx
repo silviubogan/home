@@ -7,9 +7,7 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 import { Gallery } from "@/components/Gallery";
-import { MyPhoto } from "@/lib/images";
-
-type MyImages = { poze?: MyPhoto[], screenshot?: MyPhoto[], desene?: MyPhoto[], deseneDigitaleOriginale?: MyPhoto[], };
+import { MyImages } from "@/lib/images";
 
 // am scris poezii, inclusiv optimiste, în exportul de pe Facebook și silviubogan.com
 
