@@ -47,7 +47,7 @@ export function MegaHome({ images }: { images: MyImages }) {
           <Gallery images={images.screenshot!} />
         </li><li>
             Am realizat în WPF un joc educațional de tip blocuri de memorie:
-            <Gallery images={images.poze!} />
+            <Gallery images={images.pozeJoc!} />
           </li><li>
             Am realizat copii ale unor desene:
             <Gallery images={images.deseneManualeCopii!} />
@@ -57,7 +57,10 @@ export function MegaHome({ images }: { images: MyImages }) {
           </li>
           <li>
             Am realizat desene manuale:
-            <Gallery images={images.deseneManualeOriginale!} /></li></>
+            <Gallery images={images.deseneManualeOriginale!} /></li>
+          <li>
+            Am realizat poze:
+            <Gallery images={images.poze!} /></li></>
       )}
     </ol>
     <p className="list-footer">

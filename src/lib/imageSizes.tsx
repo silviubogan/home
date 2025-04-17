@@ -1,4 +1,7 @@
-import { MyPhoto, poze, deseneManualeCopii, screenshot, deseneDigitaleOriginale, deseneManualeOriginale } from '@/lib/images';
+import {
+    MyPhoto, pozeJoc, deseneManualeCopii, screenshot,
+    deseneDigitaleOriginale, deseneManualeOriginale, poze
+} from '@/lib/images';
 import { imageSizeFromFile } from 'image-size/fromFile';
 import { imageSize } from 'image-size';
 
@@ -49,6 +52,7 @@ export const getImages = async () => {
 
     const obj = {
         poze: await map(poze),
+        pozeJoc: await map(pozeJoc),
         deseneManualeCopii: await map(deseneManualeCopii),
         screenshot: await map(screenshot),
         deseneDigitaleOriginale: await map(deseneDigitaleOriginale),

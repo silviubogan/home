@@ -1,4 +1,14 @@
-export const poze: MyPhoto[] = [
+export type MyPhoto = { src: string, width: number, height: number, alt?: string };
+export type MyImages = {
+    poze?: MyPhoto[],
+    pozeJoc?: MyPhoto[],
+    deseneManualeCopii: MyPhoto[],
+    screenshot?: MyPhoto[],
+    desene?: MyPhoto[],
+    deseneDigitaleOriginale?: MyPhoto[],
+    deseneManualeOriginale: MyPhoto[] };
+
+export const pozeJoc: MyPhoto[] = [
     {
         src: "educationalmemoryblocks_2019-07-28_16-04-31.png",
         width: 1000,
@@ -35,6 +45,14 @@ export const poze: MyPhoto[] = [
         height: 600,
     },
 ];
+
+export const poze: MyPhoto[] = [
+    {
+        src: "https://i.imgur.com/dZrFUhH.jpeg",
+        width: 0,
+        height: 0,
+    },
+]
 
 export const deseneManualeCopii: MyPhoto[] = [
     {
@@ -163,7 +181,3 @@ export const deseneManualeOriginale: MyPhoto[] = [
         height: 0,
     },
 ];
-
-export type MyPhoto = { src: string, width: number, height: number, alt?: string };
-export type MyImages = { poze?: MyPhoto[], deseneManualeCopii: MyPhoto[], screenshot?: MyPhoto[],
-    desene?: MyPhoto[], deseneDigitaleOriginale?: MyPhoto[], deseneManualeOriginale: MyPhoto[] };
