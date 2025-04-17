@@ -35,3 +35,15 @@ h1 {
 a {
   color: blue;
 }
+
+ol {
+  list-style-type: decimal;
+}
+
+ol > li > ol {
+  margin-left: 1rem;
+}
+
+.list-footer {
+  margin-left: 3rem;
+}

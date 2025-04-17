@@ -3,47 +3,40 @@ export const poze: MyPhoto[] = [
         src: "educationalmemoryblocks_2019-07-28_16-04-31.png",
         width: 1000,
         height: 600,
-        //thumbnail: "educationalmemoryblocks_2019-07-28_16-04-31.png",
     },
     {
         src: "educationalmemoryblocks_2019-07-28_16-06-28.png",
         width: 1000,
         height: 600,
-        //thumbnail: "educationalmemoryblocks_2019-07-28_16-06-28.png",
     },
     {
         src: "educationalmemoryblocks_2019-07-28_16-06-38.png",
         width: 1000,
         height: 600,
-        //thumbnail: "educationalmemoryblocks_2019-07-28_16-06-38.png",
     },
     {
         src: "educationalmemoryblocks_2019-07-28_16-07-32.png",
         width: 1000,
         height: 600,
-        //thumbnail: "educationalmemoryblocks_2019-07-28_16-06-38.png",
     },
     {
         src: "educationalmemoryblocks_2019-08-16_14-16-31.png",
         width: 1000,
         height: 600,
-        //thumbnail: "educationalmemoryblocks_2019-07-28_16-06-38.png",
     },
     {
         src: "educationalmemoryblocks_2019-08-16_14-18-05.png",
         width: 1000,
         height: 600,
-        //thumbnail: "educationalmemoryblocks_2019-07-28_16-06-38.png",
     },
     {
         src: "educationalmemoryblocks_2019-08-16_14-19-17.png",
         width: 1000,
         height: 600,
-        //thumbnail: "educationalmemoryblocks_2019-07-28_16-06-38.png",
     },
 ];
 
-export const desene: MyPhoto[] = [
+export const deseneManualeCopii: MyPhoto[] = [
     {
         src: "lucru desen/Imagine-0001.png",
         width: 1000,
@@ -70,7 +63,7 @@ export const screenshot: MyPhoto[] = [
     },
 ];
 
-export const deseneOriginale: MyPhoto[] = [
+export const deseneDigitaleOriginale: MyPhoto[] = [
     {
         src: "desene originale/1.jpg",
         width: 1000,
@@ -136,6 +129,9 @@ export const deseneOriginale: MyPhoto[] = [
         width: 1000,
         height: 600,
     },
+];
+
+export const deseneManualeOriginale: MyPhoto[] = [
     {
         src: "desene originale/14.jpg",
         width: 1000,
