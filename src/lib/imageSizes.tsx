@@ -1,16 +1,30 @@
 import {
     MyPhoto, pozeJoc, deseneManualeCopii, screenshot,
     deseneDigitaleOriginale, deseneManualeOriginale, poze,
-    citatCuGraficăÎnGimp, temeWordPress,
+    citatCuGraficăÎnGimp, temeWordPress, artă,
     MyImages
 } from '@/lib/images';
 import { imageSizeFromFile } from 'image-size/fromFile';
 import { imageSize } from 'image-size';
 
 async function imageSizeFromUrl(imgUrl: string): Promise<Omit<MyPhoto, "src">> {
-    const f = await fetch(imgUrl);
-    const c = await imageSize(new Uint8Array(await f.arrayBuffer()));
-    return { width: c.width, height: c.height };
+    let f, c, a;
+    try {
+        f = await fetch(imgUrl);
+        try {
+            a = await f.arrayBuffer();
+            try {
+                c = await imageSize(new Uint8Array(a));
+                return { width: c.width, height: c.height };
+            } catch {
+                throw new Error("Can't get image size for array from array buffer.");
+            }
+        } catch {
+            throw new Error("Can't get array buffer for fetch call.");
+        }
+    } catch {
+        throw new Error("Image URL not reachable.");
+    }
 }
 
 export const getImages = async (): Promise<MyImages> => {
@@ -61,6 +75,7 @@ export const getImages = async (): Promise<MyImages> => {
         deseneManualeOriginale: await map(deseneManualeOriginale),
         citatCuGraficăÎnGimp: await map(citatCuGraficăÎnGimp),
         temeWordPress: await map(temeWordPress),
+        artă: await map(artă),
     };
 
     return obj;

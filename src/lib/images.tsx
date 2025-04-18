@@ -11,6 +11,7 @@ export type MyImages = {
     deseneManualeOriginale: MyPhoto[],
     citatCuGraficăÎnGimp: MyPhoto[],
     temeWordPress: MyPhoto[],
+    artă: MyPhoto[],
 };
 
 export const pozeJoc: MyPhoto[] = [
@@ -122,6 +123,17 @@ export const deseneManualeOriginale: MyPhoto[] = [
     {
         src: "https://i.imgur.com/L1esgq4.jpeg",
     },
+    { src: "https://i.imgur.com/jQoNfHT.jpeg" },
+    { src: "https://i.imgur.com/ZG2nlpO.jpeg" },
+    { src: "https://i.imgur.com/TFK45qv.jpeg" },
+    { src: "https://i.imgur.com/hw3YPWO.jpeg" },
+    { src: "https://i.imgur.com/kzhTGcF.jpeg" },
+    { src: "https://i.imgur.com/brCiwjP.jpeg" },
+    { src: "https://i.imgur.com/pdwtDe2.jpeg" },
+    { src: "https://i.imgur.com/KUVBrFu.jpeg" },
+    { src: "https://i.imgur.com/MXs4zdW.jpeg" },
+    { src: "https://i.imgur.com/B1AuFaJ.jpeg" },
+    { src: "https://i.imgur.com/ah0MgOV.jpeg" },
 ];
 
 export const citatCuGraficăÎnGimp: MyPhoto[] = [
@@ -131,4 +143,8 @@ export const citatCuGraficăÎnGimp: MyPhoto[] = [
 export const temeWordPress: MyPhoto[] = [
     { src: "https://i.imgur.com/KbbriSx.png" },
     { src: "https://i.imgur.com/Bw12Grt.png" },
+];
+
+export const artă: MyPhoto[] = [
+    { src: "https://i.imgur.com/rcyplGP.jpeg" }
 ];

@@ -66,11 +66,14 @@ export function MegaHome({ images }: { images: MyImages }) {
             <Gallery images={images.citatCuGraficăÎnGimp} />
           </li>
           <li>Am realizat teme WordPress:
-            <Gallery images={images.temeWordPress} /></li></>
+            <Gallery images={images.temeWordPress} /></li>
+          <li>Am realizat artă:
+            <Gallery images={images.artă} /></li></>
       )}
     </ol>
     <p className="list-footer">
-      Vezi și <a href="https//www.github.com/silviubogan">www.github.com/silviubogan</a>.
+      Pe <a href="https//www.github.com/silviubogan">www.github.com/silviubogan</a> am
+      câteva depozite și contribuții la Volto.
     </p>
   </main>;
 };
