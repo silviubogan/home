@@ -33,44 +33,93 @@ export function MegaHome({ images }: { images: MyImages }) {
         </a>
       </li>
       <li>
-        Am realizat video cu un început de proiect Turnurile din Hanoi în Unity.<br />
-        <LiteYouTubeEmbed
-          id="itq3OVe3pqs"
-          title="început de proiect Turnurile din Hanoi în Unity"
-        />
+        <p>Am realizat filme pe YouTube:</p>
+        <ol>
+          <li>
+            Controlul versiunilor cu Git (teorie)
+            <LiteYouTubeEmbed id="EWXL0Xjh0P0"
+              title="Controlul versiunilor cu Git (teorie)" />
+          </li>
+          <li>
+            Un început de proiect Turnurile din Hanoi în Unity
+            <LiteYouTubeEmbed
+              id="itq3OVe3pqs"
+              title="Un început de proiect Turnurile din Hanoi în Unity"
+            />
+          </li>
+          <li>
+            Truc pentru a scrie repede mesajele de commit Git
+            <LiteYouTubeEmbed id="gioabeN6O4A"
+              title="Truc pentru a scrie repede mesajele de commit Git" />
+          </li>
+          <li>
+            Câteva minute despre NPM
+            <LiteYouTubeEmbed id="EYhT94V9Kas"
+              title="Câteva minute despre NPM" />
+          </li>
+          <li>Versuri recitate: Poezie picată din Cer
+            <LiteYouTubeEmbed id="rNs7LWg2wdc"
+              title="Poezie picată din Cer" /></li>
+          <li>Introducere în CodeSandbox, prototip
+            <LiteYouTubeEmbed id="w24QZSyYNmE"
+              title="WIP Video 20.12.2020 (primul din 2021)" /></li>
+          <li>
+            Tutorial Unity pentru crearea unui ecran cu numărătoare inversă
+            <LiteYouTubeEmbed id="vio7nzu0sBg"
+              title="Tutorial Unity pentru crearea unui ecran cu numărătoare inversă" />
+          </li>
+          <li>Tutorial Unity pentru crearea unui indicator de sănătate
+            <LiteYouTubeEmbed id="Zdz6NFnfFwA"
+              title="Tutorial Unity pentru crearea unui indicator de sănătate" />
+          </li>
+          <li>Tutorial Unity pentru crearea unei animații de glisare
+            <LiteYouTubeEmbed id="L3ePQSttC2s"
+              title="Tutorial Unity pentru crearea unei animații de glisare" />
+          </li>
+          <li>
+            Scurt video de prezentare a unui prototip de gestionar de fișiere bazat pe Qt (Qt Widgets)
+            <LiteYouTubeEmbed id="fuwDizAz6j0"
+              title="qt-file-manager 2017 08 26 01 12 19" />
+          </li>
+          <li>
+            Analiza aplicației Weather pe Windows 10 (25.09.2016)
+            <LiteYouTubeEmbed id="CmmkqpDIs0M"
+              title="Analiza aplicației Weather pe Windows 10 (25.09.2016)" />
+          </li>
+        </ol>
       </li>
-      <><li>
+      <li>
         <p>
           Am realizat în Electron <a href="https://github.com/silviubogan/reminder-to-see">un program</a> testat pe Linux și Windows care pune periodic utilizatorul să facă clic pentru a continua, evitând orbecăirea.
         </p>
         <Gallery images={images.screenshot} />
       </li><li>
-          Am realizat în WPF un joc educațional de tip blocuri de memorie:
-          <Gallery images={images.pozeJoc} />
-        </li><li>
-          Am realizat în WPF un joc educațional de tip snake:
-          <Gallery images={images.pozeJocSnake} />
-        </li><li>
-          Am realizat copii ale unor desene:
-          <Gallery images={images.deseneManualeCopii} />
-        </li><li>
-          Am realizat desene digitale:
-          <Gallery images={images.deseneDigitaleOriginale} />
-        </li>
-        <li>
-          Am realizat desene manuale:
-          <Gallery images={images.deseneManualeOriginale} /></li>
-        <li>
-          Am realizat poze:
-          <Gallery images={images.poze} /></li>
-        <li>
-          Am realizat grafică cu citat în GIMP:
-          <Gallery images={images.citatCuGraficăÎnGimp} />
-        </li>
-        <li>Am realizat teme WordPress:
-          <Gallery images={images.temeWordPress} /></li>
-        <li>Am realizat artă:
-          <Gallery images={images.artă} /></li></>
+        Am realizat în WPF un joc educațional de tip blocuri de memorie:
+        <Gallery images={images.pozeJoc} />
+      </li><li>
+        Am realizat în WPF un joc educațional de tip snake:
+        <Gallery images={images.pozeJocSnake} />
+      </li><li>
+        Am realizat copii ale unor desene:
+        <Gallery images={images.deseneManualeCopii} />
+      </li><li>
+        Am realizat desene digitale:
+        <Gallery images={images.deseneDigitaleOriginale} />
+      </li>
+      <li>
+        Am realizat desene manuale:
+        <Gallery images={images.deseneManualeOriginale} /></li>
+      <li>
+        Am realizat poze:
+        <Gallery images={images.poze} /></li>
+      <li>
+        Am realizat grafică cu citat în GIMP:
+        <Gallery images={images.citatCuGraficăÎnGimp} />
+      </li>
+      <li>Am realizat teme WordPress:
+        <Gallery images={images.temeWordPress} /></li>
+      <li>Am realizat artă:
+        <Gallery images={images.artă} /></li>
     </ol>
     <p className="list-footer">
       Pe <a href="https//www.github.com/silviubogan">www.github.com/silviubogan</a> am

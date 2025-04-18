@@ -47,3 +47,9 @@ ol > li > ol {
 .list-footer {
   margin-left: 3rem;
 }
+
+article.yt-lite {
+  width: auto;
+  min-width: 20rem;
+  max-width: 30rem;
+}
