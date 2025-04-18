@@ -64,7 +64,9 @@ export function MegaHome({ images }: { images: MyImages }) {
           <li>
             Am realizat grafică cu citat în GIMP:
             <Gallery images={images.citatCuGraficăÎnGimp} />
-          </li></>
+          </li>
+          <li>Am realizat teme WordPress:
+            <Gallery images={images.temeWordPress} /></li></>
       )}
     </ol>
     <p className="list-footer">

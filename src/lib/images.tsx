@@ -10,6 +10,7 @@ export type MyImages = {
     deseneDigitaleOriginale: MyPhoto[],
     deseneManualeOriginale: MyPhoto[],
     citatCuGraficăÎnGimp: MyPhoto[],
+    temeWordPress: MyPhoto[],
 };
 
 export const pozeJoc: MyPhoto[] = [
@@ -125,4 +126,9 @@ export const deseneManualeOriginale: MyPhoto[] = [
 
 export const citatCuGraficăÎnGimp: MyPhoto[] = [
     { src: "https://i.imgur.com/uy8k5cB.jpeg" },
+];
+
+export const temeWordPress: MyPhoto[] = [
+    { src: "https://i.imgur.com/KbbriSx.png" },
+    { src: "https://i.imgur.com/Bw12Grt.png" },
 ];
