@@ -1,6 +1,7 @@
 import {
     MyPhoto, pozeJoc, deseneManualeCopii, screenshot,
-    deseneDigitaleOriginale, deseneManualeOriginale, poze
+    deseneDigitaleOriginale, deseneManualeOriginale, poze,
+    citatCuGraficăÎnGimp
 } from '@/lib/images';
 import { imageSizeFromFile } from 'image-size/fromFile';
 import { imageSize } from 'image-size';
@@ -57,6 +58,7 @@ export const getImages = async () => {
         screenshot: await map(screenshot),
         deseneDigitaleOriginale: await map(deseneDigitaleOriginale),
         deseneManualeOriginale: await map(deseneManualeOriginale),
+        citatCuGraficăÎnGimp: await map(citatCuGraficăÎnGimp),
     };
 
     return obj;
