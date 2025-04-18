@@ -1,7 +1,8 @@
 import {
     MyPhoto, pozeJoc, deseneManualeCopii, screenshot,
     deseneDigitaleOriginale, deseneManualeOriginale, poze,
-    citatCuGraficăÎnGimp
+    citatCuGraficăÎnGimp,
+    MyImages
 } from '@/lib/images';
 import { imageSizeFromFile } from 'image-size/fromFile';
 import { imageSize } from 'image-size';
@@ -12,7 +13,7 @@ async function imageSizeFromUrl(imgUrl: string): Promise<Omit<MyPhoto, "src">> {
     return { width: c.width, height: c.height };
 }
 
-export const getImages = async () => {
+export const getImages = async (): Promise<MyImages> => {
     const fill = async (x: MyPhoto) => {
         const path = "public/" + x.src;
         const d = await imageSizeFromFile(path);

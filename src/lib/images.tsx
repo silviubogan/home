@@ -7,7 +7,6 @@ export type MyImages = {
     pozeJoc: MyPhoto[],
     deseneManualeCopii: MyPhoto[],
     screenshot: MyPhoto[],
-    desene: MyPhoto[],
     deseneDigitaleOriginale: MyPhoto[],
     deseneManualeOriginale: MyPhoto[],
     citatCuGraficăÎnGimp: MyPhoto[],
