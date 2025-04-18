@@ -24,7 +24,14 @@ export const Gallery: FC<{ images?: MyPhoto[] }> = ({ images }: { images?: MyPho
   }
 
   return <>
-    <MasonryPhotoAlbum photos={images} onClick={({ index }) => setIdx(index)}
+    <MasonryPhotoAlbum
+      photos={images.map(x => ({
+        src: x.src,
+        width: x.width || 0,
+        height: x.height || 0,
+        alt: x.alt || undefined
+      }))}
+      onClick={({ index }) => setIdx(index)}
       render={{ image: renderNextImage }} />
     <Lightbox
       slides={images}
