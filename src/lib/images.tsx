@@ -37,9 +37,8 @@ export const pozeJoc: MyPhoto[] = [
 ];
 
 export const poze: MyPhoto[] = [
-    {
-        src: "https://i.imgur.com/dZrFUhH.jpeg",
-    },
+    { src: "https://i.imgur.com/dZrFUhH.jpeg" },
+    { src: "https://i.imgur.com/BjPWmEC.jpeg" },
 ]
 
 export const deseneManualeCopii: MyPhoto[] = [
@@ -125,5 +124,5 @@ export const deseneManualeOriginale: MyPhoto[] = [
 ];
 
 export const citatCuGraficăÎnGimp: MyPhoto[] = [
-    { src: "https://i.imgur.com/uy8k5cB.jpeg" }
+    { src: "https://i.imgur.com/uy8k5cB.jpeg" },
 ];
