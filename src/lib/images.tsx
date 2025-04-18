@@ -5,6 +5,7 @@ export type MyPhoto = {
 export type MyImages = {
     poze: MyPhoto[],
     pozeJoc: MyPhoto[],
+    pozeJocSnake: MyPhoto[],
     deseneManualeCopii: MyPhoto[],
     screenshot: MyPhoto[],
     deseneDigitaleOriginale: MyPhoto[],
@@ -36,6 +37,11 @@ export const pozeJoc: MyPhoto[] = [
     {
         src: "educationalmemoryblocks_2019-08-16_14-19-17.png",
     },
+];
+
+export const pozeJocSnake: MyPhoto[] = [
+    { src: "https://i.imgur.com/DeNb68o.png" },
+    { src: "https://i.imgur.com/HZPOUu0.png" },
 ];
 
 export const poze: MyPhoto[] = [
@@ -134,6 +140,11 @@ export const deseneManualeOriginale: MyPhoto[] = [
     { src: "https://i.imgur.com/MXs4zdW.jpeg" },
     { src: "https://i.imgur.com/B1AuFaJ.jpeg" },
     { src: "https://i.imgur.com/ah0MgOV.jpeg" },
+    { src: "https://i.imgur.com/nlU3uiK.jpeg" },
+    { src: "https://i.imgur.com/6UmrEtW.jpeg" },
+    { src: "https://i.imgur.com/PPiYBa8.jpeg" },
+    { src: "https://i.imgur.com/RIvCcyP.jpeg" },
+    { src: "https://i.imgur.com/l50vZZV.jpeg" },
 ];
 
 export const citatCuGraficăÎnGimp: MyPhoto[] = [

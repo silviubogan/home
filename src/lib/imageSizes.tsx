@@ -1,7 +1,7 @@
 import {
     MyPhoto, pozeJoc, deseneManualeCopii, screenshot,
     deseneDigitaleOriginale, deseneManualeOriginale, poze,
-    citatCuGraficăÎnGimp, temeWordPress, artă,
+    citatCuGraficăÎnGimp, temeWordPress, artă, pozeJocSnake,
     MyImages
 } from '@/lib/images';
 import { imageSizeFromFile } from 'image-size/fromFile';
@@ -76,6 +76,7 @@ export const getImages = async (): Promise<MyImages> => {
         citatCuGraficăÎnGimp: await map(citatCuGraficăÎnGimp),
         temeWordPress: await map(temeWordPress),
         artă: await map(artă),
+        pozeJocSnake: await map(pozeJocSnake),
     };
 
     return obj;
