@@ -113,13 +113,22 @@ export function MegaHome({ images }: { images: MyImages }) {
         Am realizat poze:
         <Gallery images={images.poze} /></li>
       <li>
-        Am realizat grafică cu citat în GIMP:
-        <Gallery images={images.citatCuGraficăÎnGimp} />
+        Am realizat grafică în GIMP:
+        <Gallery images={images.graficăÎnGimp} />
       </li>
       <li>Am realizat teme WordPress:
-        <Gallery images={images.temeWordPress} /></li>
+        <Gallery images={images.temeWordPress} />
+        și câteva site-uri pentru o afacere:
+        <Gallery images={images.afacereWordPress} />
+      </li>
+      <li>Am realizat artă CSS:
+        <Gallery images={images.artăCss} />
+      </li>
       <li>Am realizat artă:
         <Gallery images={images.artă} /></li>
+      <li>Am realizat postări pe blogul vechi:
+        <Gallery images={images.articoleBlogVechi} />
+      </li>
     </ol>
     <p className="list-footer">
       Pe <a href="https//www.github.com/silviubogan">www.github.com/silviubogan</a> am

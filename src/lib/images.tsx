@@ -10,9 +10,12 @@ export type MyImages = {
     screenshot: MyPhoto[],
     deseneDigitaleOriginale: MyPhoto[],
     deseneManualeOriginale: MyPhoto[],
-    citatCuGraficăÎnGimp: MyPhoto[],
+    graficăÎnGimp: MyPhoto[],
     temeWordPress: MyPhoto[],
     artă: MyPhoto[],
+    artăCss: MyPhoto[],
+    afacereWordPress: MyPhoto[];
+    articoleBlogVechi: MyPhoto[];
 };
 
 export const pozeJoc: MyPhoto[] = [
@@ -108,6 +111,9 @@ export const deseneDigitaleOriginale: MyPhoto[] = [
     {
         src: "desene originale/13.jpg",
     },
+    {
+        src: "https://i.imgur.com/d7Fnbdn.png"
+    }
 ];
 
 export const deseneManualeOriginale: MyPhoto[] = [
@@ -145,17 +151,48 @@ export const deseneManualeOriginale: MyPhoto[] = [
     { src: "https://i.imgur.com/PPiYBa8.jpeg" },
     { src: "https://i.imgur.com/RIvCcyP.jpeg" },
     { src: "https://i.imgur.com/l50vZZV.jpeg" },
+    { src: "https://i.imgur.com/SiPsJJA.jpeg" },
 ];
 
-export const citatCuGraficăÎnGimp: MyPhoto[] = [
+export const graficăÎnGimp: MyPhoto[] = [
     { src: "https://i.imgur.com/uy8k5cB.jpeg" },
+    { src: "https://i.imgur.com/pJN0nSp.jpeg" },
+    { src: "https://i.imgur.com/g3JbJiP.jpeg" },
+    { src: "https://i.imgur.com/9VwapnI.jpeg" },
+    { src: "https://i.imgur.com/DS9Uwh9.jpeg" },
 ];
 
 export const temeWordPress: MyPhoto[] = [
     { src: "https://i.imgur.com/KbbriSx.png" },
     { src: "https://i.imgur.com/Bw12Grt.png" },
+    { src: "https://i.imgur.com/TBsogAO.png" },
+    { src: "https://i.imgur.com/CqhoPnl.png" },
 ];
 
 export const artă: MyPhoto[] = [
     { src: "https://i.imgur.com/rcyplGP.jpeg" }
+];
+
+export const afacereWordPress: MyPhoto[] = [
+    { src: "https://i.imgur.com/3BTAvdM.png" },
+    { src: "https://i.imgur.com/J3H6UQe.png" },
+    { src: "https://i.imgur.com/iFeHPmk.png" },
+    { src: "https://i.imgur.com/Uxumnup.png" },
+    { src: "https://i.imgur.com/qhRBESI.png" },
+    { src: "https://i.imgur.com/jt5CKj0.png" },
+    { src: "https://i.imgur.com/5dK6QAZ.png" },
+    { src: "https://i.imgur.com/zKB2vvL.png" },
+    { src: "https://i.imgur.com/BDCvb5q.png" },
+    { src: "https://i.imgur.com/AfZD9OK.png" },
+    { src: "https://i.imgur.com/5cRNfqh.png" },
+    { src: "https://i.imgur.com/BSaX04p.png" },
+    { src: "https://i.imgur.com/AbrDfOW.png" },
+];
+
+export const articoleBlogVechi: MyPhoto[] = [
+    { src: "https://i.imgur.com/cri2fqY.png" },
+];
+
+export const artăCss: MyPhoto[] = [
+    { src: "https://i.imgur.com/jkEv2CH.png" },
 ];
