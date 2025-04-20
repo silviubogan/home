@@ -24,12 +24,9 @@ async function downloadFile(url: string, to: string) {
 }
 
 async function imageDataFromUrl(imgUrl: string): Promise<Omit<MyPhoto, "src">> {
-    // let f, c, a;
     const folder = "image-cache/";
     const n = imgUrl.replace(/\//g, "\\");
-        // console.dir(imgUrl);
     const np = folder + n;
-    // console.dir(np);
     const v = existsSync(folder);
     if (!v) {
         mkdirSync(folder);
@@ -39,23 +36,6 @@ async function imageDataFromUrl(imgUrl: string): Promise<Omit<MyPhoto, "src">> {
     }
     const c = await imageSizeFromFile(np);
     return { width: c.width, height: c.height };
-    // }
-    // try {
-    //     f = await fetch(imgUrl);
-    //     try {
-    //         a = await f.arrayBuffer();
-    //         try {
-    //             c = await imageSize(new Uint8Array(a));
-    //             return { width: c.width, height: c.height };
-    //         } catch {
-    //             throw new Error("Can't get image size for array from array buffer.");
-    //         }
-    //     } catch {
-    //         throw new Error("Can't get array buffer for fetch call.");
-    //     }
-    // } catch {
-    //     throw new Error("Image URL not reachable.");
-    // }
 }
 
 export const getImages = async (): Promise<MyImages> => {
