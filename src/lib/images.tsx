@@ -16,6 +16,7 @@ export type MyImages = {
     artăCss: MyPhoto[],
     afacereWordPress: MyPhoto[];
     articoleBlogVechi: MyPhoto[];
+    diplome: MyPhoto[],
 };
 
 export const pozeJoc: MyPhoto[] = [
@@ -113,7 +114,8 @@ export const deseneDigitaleOriginale: MyPhoto[] = [
     },
     {
         src: "https://i.imgur.com/d7Fnbdn.png"
-    }
+    },
+    { src: "https://i.imgur.com/MQrsRzE.jpeg" },
 ];
 
 export const deseneManualeOriginale: MyPhoto[] = [
@@ -195,4 +197,30 @@ export const articoleBlogVechi: MyPhoto[] = [
 
 export const artăCss: MyPhoto[] = [
     { src: "https://i.imgur.com/jkEv2CH.png" },
+];
+
+export const diplome: MyPhoto[] = [
+    { src: "https://i.imgur.com/pKnKw9j.jpeg" },
+    { src: "https://i.imgur.com/yuGiAvS.jpeg" },
+    { src: "https://i.imgur.com/infkWtM.jpeg" },
+    { src: "https://i.imgur.com/dWSRdhQ.jpeg" },
+    { src: "https://i.imgur.com/8V4rUob.jpeg" },
+    { src: "https://i.imgur.com/Smcx9WK.jpeg" },
+    { src: "https://i.imgur.com/QtAjDGf.jpeg" },
+    { src: "https://i.imgur.com/KGLbiZh.jpeg" },
+    { src: "https://i.imgur.com/RAh9LJ6.jpeg" },
+    { src: "https://i.imgur.com/Qi7VYDb.jpeg" },
+    { src: "https://i.imgur.com/kXfhSX9.jpeg" },
+    { src: "https://i.imgur.com/7kOVFRc.jpeg" },
+    { src: "https://i.imgur.com/1XXMXmB.jpeg" },
+    { src: "https://i.imgur.com/7i3rwPd.jpeg" },
+    { src: "https://i.imgur.com/mal64rD.jpeg" },
+    { src: "https://i.imgur.com/EznqfIv.jpeg" },
+    { src: "https://i.imgur.com/33d1WLZ.jpeg" },
+    { src: "https://i.imgur.com/HkxUAOd.jpeg" },
+    { src: "https://i.imgur.com/G4b0Sud.jpeg" },
+    { src: "https://i.imgur.com/cB0fkgu.jpeg" },
+    { src: "https://i.imgur.com/cB0fkgu.jpeg" },
+    { src: "https://i.imgur.com/6zl9kh7.jpeg" },
+    { src: "https://i.imgur.com/WctuR2k.jpeg" },
 ];

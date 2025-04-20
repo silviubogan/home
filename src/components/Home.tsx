@@ -126,6 +126,9 @@ export function MegaHome({ images }: { images: MyImages }) {
       </li>
       <li>Am realizat artă:
         <Gallery images={images.artă} /></li>
+      <li>Pentru realizări am primit diplome, de exemplu:
+        <Gallery images={images.diplome} />
+      </li>
       <li>Am realizat postări pe blogul vechi:
         <Gallery images={images.articoleBlogVechi} />
       </li>
