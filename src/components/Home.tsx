@@ -132,10 +132,16 @@ export function MegaHome({ images }: { images: MyImages }) {
       <li>Am realizat postări pe blogul vechi:
         <Gallery images={images.articoleBlogVechi} />
       </li>
+      <li>Am realizat cover-uri la melodii, ca:
+        <p>Vama Veche - Epilog (cover)</p>
+        <LiteYouTubeEmbed id="YOHbc14l54c"
+          title="Vama Veche - Epilog (cover)" />
+      </li>
     </ol>
     <p className="list-footer">
+      Contactați-mă <a href="https://x.com/silviubogan">pe X (silviubogan)</a>.<br />
       Pe <a href="https//www.github.com/silviubogan">www.github.com/silviubogan</a> am
       câteva depozite și contribuții la Volto.
     </p>
-  </main>;
+``  </main>;
 };
