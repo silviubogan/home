@@ -9,24 +9,49 @@ import {
 import { imageSizeFromFile } from 'image-size/fromFile';
 import { imageSize } from 'image-size';
 
-async function imageSizeFromUrl(imgUrl: string): Promise<Omit<MyPhoto, "src">> {
-    let f, c, a;
-    try {
-        f = await fetch(imgUrl);
-        try {
-            a = await f.arrayBuffer();
-            try {
-                c = await imageSize(new Uint8Array(a));
-                return { width: c.width, height: c.height };
-            } catch {
-                throw new Error("Can't get image size for array from array buffer.");
-            }
-        } catch {
-            throw new Error("Can't get array buffer for fetch call.");
-        }
-    } catch {
-        throw new Error("Image URL not reachable.");
+import { existsSync, mkdirSync } from 'node:fs';
+import { writeFile } from 'node:fs/promises';
+import { Readable } from "node:stream";
+
+async function downloadFile(url: string, to: string) {
+    const res = await fetch(url);
+    const stream = Readable.fromWeb(res.body);
+    return await writeFile(to, stream);
+}
+
+async function imageDataFromUrl(imgUrl: string): Promise<Omit<MyPhoto, "src">> {
+    // let f, c, a;
+    const folder = "image-cache/";
+    const n = imgUrl.replace(/\//g, "\\");
+        // console.dir(imgUrl);
+    const np = folder + n;
+    // console.dir(np);
+    const v = existsSync(folder);
+    if (!v) {
+        mkdirSync(folder);
     }
+    if (!existsSync(np)) {
+        await downloadFile(imgUrl, np);
+    }
+    const c = await imageSizeFromFile(np);
+    return { width: c.width, height: c.height };
+    // }
+    // try {
+    //     f = await fetch(imgUrl);
+    //     try {
+    //         a = await f.arrayBuffer();
+    //         try {
+    //             c = await imageSize(new Uint8Array(a));
+    //             return { width: c.width, height: c.height };
+    //         } catch {
+    //             throw new Error("Can't get image size for array from array buffer.");
+    //         }
+    //     } catch {
+    //         throw new Error("Can't get array buffer for fetch call.");
+    //     }
+    // } catch {
+    //     throw new Error("Image URL not reachable.");
+    // }
 }
 
 export const getImages = async (): Promise<MyImages> => {
@@ -43,7 +68,7 @@ export const getImages = async (): Promise<MyImages> => {
         const subpromises: Promise<MyPhoto>[] = [];
         arr.forEach((e) => {
             if (e.src.startsWith("https://") || e.src.startsWith("http://")) {
-                const i = imageSizeFromUrl(e.src);
+                const i = imageDataFromUrl(e.src);
                 const p = i.then(async (s) => {
                     const pp = new Promise<MyPhoto>((resolve) => {
                         resolve({

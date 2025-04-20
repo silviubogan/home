@@ -220,7 +220,6 @@ export const diplome: MyPhoto[] = [
     { src: "https://i.imgur.com/HkxUAOd.jpeg" },
     { src: "https://i.imgur.com/G4b0Sud.jpeg" },
     { src: "https://i.imgur.com/cB0fkgu.jpeg" },
-    { src: "https://i.imgur.com/cB0fkgu.jpeg" },
     { src: "https://i.imgur.com/6zl9kh7.jpeg" },
     { src: "https://i.imgur.com/WctuR2k.jpeg" },
 ];

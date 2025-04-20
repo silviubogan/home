@@ -25,6 +25,7 @@ export const Gallery: FC<{ images?: MyPhoto[] }> = ({ images }: { images?: MyPho
 
   return <>
     <MasonryPhotoAlbum
+      key={images[0].src}
       photos={images.map(x => ({
         src: x.src,
         width: x.width || 0,
@@ -34,6 +35,7 @@ export const Gallery: FC<{ images?: MyPhoto[] }> = ({ images }: { images?: MyPho
       onClick={({ index }) => setIdx(index)}
       render={{ image: renderNextImage }} />
     <Lightbox
+      key={images[0].src + "_lightbox"}
       slides={images}
       open={idx >= 0}
       index={idx}
