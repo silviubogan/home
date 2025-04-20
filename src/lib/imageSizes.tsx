@@ -14,8 +14,13 @@ import { Readable } from "node:stream";
 
 async function downloadFile(url: string, to: string) {
     const res = await fetch(url);
-    const stream = Readable.fromWeb(res.body);
-    return await writeFile(to, stream);
+    if (res.body === null) {
+        throw new Error("Fetched invalid body");
+    } else {
+        // @ts-expect-error complex type mismatch
+        const stream = Readable.fromWeb(res.body);
+        return await writeFile(to, stream);
+    }
 }
 
 async function imageDataFromUrl(imgUrl: string): Promise<Omit<MyPhoto, "src">> {
