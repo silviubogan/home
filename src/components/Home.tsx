@@ -160,16 +160,12 @@ export function MegaHome({ images }: { images: MyImages }) {
           <Gallery images={images.pozeJocSnake} />
         </li>
         <li>
-          Am realizat copii ale unor desene:
-          <Gallery images={images.deseneManualeCopii} />
+          Am realizat desene manuale:
+          <Gallery images={images.deseneManuale} />
         </li>
         <li>
           Am realizat desene digitale:
           <Gallery images={images.deseneDigitaleOriginale} />
-        </li>
-        <li>
-          Am realizat desene manuale:
-          <Gallery images={images.deseneManualeOriginale} />
         </li>
         <li>
           Am realizat poze:

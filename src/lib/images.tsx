@@ -8,10 +8,9 @@ export type MyImages = {
   poze: MyPhoto[];
   pozeJoc: MyPhoto[];
   pozeJocSnake: MyPhoto[];
-  deseneManualeCopii: MyPhoto[];
+  deseneManuale: MyPhoto[];
   screenshot: MyPhoto[];
   deseneDigitaleOriginale: MyPhoto[];
-  deseneManualeOriginale: MyPhoto[];
   graficăÎnGimp: MyPhoto[];
   temeWordPress: MyPhoto[];
   artă: MyPhoto[];
@@ -53,18 +52,6 @@ export const pozeJocSnake: MyPhoto[] = [
 export const poze: MyPhoto[] = [
   { src: "https://i.imgur.com/dZrFUhH.jpeg" },
   { src: "https://i.imgur.com/BjPWmEC.jpeg" },
-];
-
-export const deseneManualeCopii: MyPhoto[] = [
-  {
-    src: "lucru desen/Imagine-0001.png",
-  },
-  {
-    src: "lucru desen/Imagine-0003.png",
-  },
-  {
-    src: "lucru desen/2/Imagine-0002.png",
-  },
 ];
 
 export const screenshot: MyPhoto[] = [
@@ -120,7 +107,16 @@ export const deseneDigitaleOriginale: MyPhoto[] = [
   { src: "https://i.imgur.com/MQrsRzE.jpeg" },
 ];
 
-export const deseneManualeOriginale: MyPhoto[] = [
+export const deseneManuale: MyPhoto[] = [
+  {
+    src: "lucru desen/Imagine-0001.png",
+  },
+  {
+    src: "lucru desen/Imagine-0003.png",
+  },
+  {
+    src: "lucru desen/2/Imagine-0002.png",
+  },
   {
     src: "desene originale/14.jpg",
   },
@@ -155,6 +151,7 @@ export const deseneManualeOriginale: MyPhoto[] = [
   { src: "https://i.imgur.com/PPiYBa8.jpeg" },
   { src: "https://i.imgur.com/RIvCcyP.jpeg" },
   { src: "https://i.imgur.com/l50vZZV.jpeg" },
+  { src: "https://i.imgur.com/99J2CsY.jpeg" },
   { src: "https://i.imgur.com/SiPsJJA.jpeg" },
 ];
 

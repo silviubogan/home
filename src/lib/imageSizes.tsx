@@ -1,10 +1,9 @@
 import {
   MyPhoto,
   pozeJoc,
-  deseneManualeCopii,
+  deseneManuale,
   screenshot,
   deseneDigitaleOriginale,
-  deseneManualeOriginale,
   poze,
   graficăÎnGimp,
   temeWordPress,
@@ -93,10 +92,9 @@ export const getImages = async (): Promise<MyImages> => {
   const obj = {
     poze: await map(poze),
     pozeJoc: await map(pozeJoc),
-    deseneManualeCopii: await map(deseneManualeCopii),
+    deseneManuale: await map(deseneManuale),
     screenshot: await map(screenshot),
     deseneDigitaleOriginale: await map(deseneDigitaleOriginale),
-    deseneManualeOriginale: await map(deseneManualeOriginale),
     graficăÎnGimp: await map(graficăÎnGimp),
     temeWordPress: await map(temeWordPress),
     artă: await map(artă),
