@@ -1,7 +1,14 @@
 import { getImages } from "@/lib/imageSizes";
-import { MegaHome } from "../components/Home";
+import { MegaHome as Home } from "../components/Home";
+import { MyParticles } from "../components/MyParticles";
 
-export default async function Home() {
+export default async function MyHome() {
   const img = await getImages();
-  return <MegaHome images={img} />;
+
+  return (
+    <>
+      <MyParticles />
+      <Home images={img} />
+    </>
+  );
 }

@@ -28,6 +28,10 @@ body {
 
 /* My styles */
 
+main {
+  position: relative; /* for Particles.js canvas as background */
+}
+
 h1 {
   font-size: 3.5rem;
 }
