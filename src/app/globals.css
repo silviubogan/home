@@ -57,3 +57,35 @@ article.yt-lite {
   min-width: 20rem;
   max-width: 30rem;
 }
+
+.matrix-button > p {
+  text-align: center;
+  width: 125%;
+  align-self: center;
+  color: white;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.matrix-button > canvas {
+  position: absolute;
+  align-self: center;
+  width: 125%;
+  height: 3rem;
+}
+
+.matrix-button {
+  display: inline-flex;
+  position: relative;
+  width: auto;
+  height: auto;
+  color: white;
+  cursor: pointer;
+  justify-content: center;
+  margin: 2rem;
+  transition: transform 0.5s;
+}
+
+.matrix-button:hover {
+  transform: scale(1.5);
+}

@@ -7,6 +7,7 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 import { Gallery } from "@/components/Gallery";
+import { MatrixButton } from "@/components/MatrixButton";
 import { MyImages } from "@/lib/images";
 
 // am scris poezii, inclusiv optimiste, în exportul de pe Facebook și silviubogan.com
@@ -207,7 +208,11 @@ export function MegaHome({ images }: { images: MyImages }) {
         </li>
       </ol>
       <p className="list-footer">
-        Contactați-mă <a href="https://x.com/silviubogan">pe X (silviubogan)</a>
+        Contactați-mă{" "}
+        <MatrixButton
+          value="pe X (silviubogan)"
+          href="https://x.com/silviubogan"
+        />
         .<br />
         Pe{" "}
         <a href="https//www.github.com/silviubogan">
@@ -215,7 +220,6 @@ export function MegaHome({ images }: { images: MyImages }) {
         </a>{" "}
         am câteva depozite și contribuții la Volto.
       </p>
-      ``{" "}
     </main>
   );
 }
