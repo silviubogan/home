@@ -222,7 +222,7 @@ export function MegaHome({ images }: { images: MyImages }) {
         </p>
         <p>
           Pe{" "}
-          <a href="https//www.github.com/silviubogan">
+          <a href="https://www.github.com/silviubogan">
             <svg
               width="1rem"
               height="1rem"
