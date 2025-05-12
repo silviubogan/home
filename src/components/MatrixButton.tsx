@@ -5,16 +5,23 @@ export const MatrixButton: React.FC<{
   value?: string;
 }> = ({ href, value }) => {
   const cRef = useRef<HTMLCanvasElement | null>(null);
+  const bRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
-    // @ts-expect-error matrix is loaded with a separate script tag in HTML
-    // so its type is not known (the issue is the missing @types/cmatrix package
-    // in npm)
-    matrix(cRef.current, {
-      chars: "aăâbcdefghiîjklmnopqrsștțuvwxyzAĂÂBCDEFGHIÎJKLMNOPQRSȘTȚUVWXYZ",
-      //matrix.range(0x30a1, 0x30f6).concat(matrix.range(0x0030, 0x0039)),
-      font_size: 200, // TODO: optimize by setting correct aspect ratio based width & height
-    });
+    if (bRef.current && cRef.current) {
+      const { width, height } = bRef.current.getBoundingClientRect();
+
+      // @ts-expect-error matrix is loaded with a separate script tag in HTML
+      // so its type is not known (the issue is the missing @types/cmatrix package
+      // in npm)
+      matrix(cRef.current, {
+        chars: "aăâbcdefghiîjklmnopqrsștțuvwxyzAĂÂBCDEFGHIÎJKLMNOPQRSȘTȚUVWXYZ",
+        //matrix.range(0x30a1, 0x30f6).concat(matrix.range(0x0030, 0x0039)),
+        font_size: 20,
+        width,
+        height,
+      });
+    }
     return () => {};
   }, []);
 
@@ -26,7 +33,13 @@ export const MatrixButton: React.FC<{
 
   return (
     <>
-      <button className="matrix-button" onClick={handleClick}>
+      <button
+        className="matrix-button"
+        onClick={handleClick}
+        ref={(r) => {
+          bRef.current = r;
+        }}
+      >
         <canvas
           ref={(r) => {
             cRef.current = r;
