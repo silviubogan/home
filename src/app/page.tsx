@@ -1,9 +1,9 @@
 import { getImages } from "@/lib/imageSizes";
-import { MegaHome as Home } from "../components/Home";
+import { MyHome } from "../components/MyHome";
 import { MyParticles } from "../components/MyParticles";
 import Script from "next/script";
 
-export default async function MyHome() {
+export default async function Home() {
   const img = await getImages();
 
   return (
@@ -13,7 +13,7 @@ export default async function MyHome() {
         strategy="beforeInteractive"
       />
       <MyParticles />
-      <Home images={img} />
+      <MyHome images={img} />
     </>
   );
 }

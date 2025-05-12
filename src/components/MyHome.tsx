@@ -18,8 +18,11 @@ import Footer from "@/components/Footer";
 import React from "react";
 
 // am scris poezii, inclusiv optimiste, în exportul de pe Facebook și silviubogan.com
+// TODO: GitHubIcon & WikipediaIcon shoud use a LabeledIcon HOC with &nbsp;
+// between icon and label
+// TODO: study Next.js routing and group files in folders as they should be
 
-export function MegaHome({ images }: { images: MyImages }) {
+export function MyHome({ images }: { images: MyImages }) {
   return (
     <main>
       <Header />
