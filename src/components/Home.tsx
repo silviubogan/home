@@ -11,6 +11,8 @@ import { MatrixButton } from "@/components/MatrixButton";
 import { MyImages } from "@/lib/images";
 import Accordion from "@/components/Accordion";
 
+import GitHubIcon from "@/components/GitHubIcon";
+
 import React from "react";
 
 // am scris poezii, inclusiv optimiste, în exportul de pe Facebook și silviubogan.com
@@ -24,9 +26,25 @@ export function MegaHome({ images }: { images: MyImages }) {
         headers={[
           "Am tradus din engleză în română",
           "Am postat articole pe blogurile",
+          "Am adunat scor pe StackExchange (inclusiv StackOverflow)",
+          "Am realizat filme pe YouTube",
+          "Am realizat în Electron un program testat pe Linux și Windows care pune periodic utilizatorul să facă clic pentru a continua, evitând orbecăirea",
+          "Am realizat în WPF un joc educațional de tip blocuri de memorie",
+          "Am realizat în WPF un joc educațional de tip snake",
+          "Am realizat desene manuale",
+          "Am realizat desene digitale",
+          "Am realizat poze",
+          "Am realizat grafică în GIMP",
+          "Am realizat teme WordPress",
+          "și câteva site-uri pentru o afacere",
+          "Am realizat artă CSS",
+          "Am realizat artă",
+          "Pentru realizări am primit diplome, de exemplu",
+          "Am realizat postări pe blogul vechi",
+          "Am realizat cover-uri la melodii",
         ]}
         items={[
-          <ol key={100}>
+          <ol key={101}>
             <li key={1}>
               <a href="https://wiki.manjaro.org/index.php/Main_Page/ro">
                 pagina principală a Wiki-ului Linux Manjaro
@@ -43,7 +61,7 @@ export function MegaHome({ images }: { images: MyImages }) {
               </a>
             </li>
           </ol>,
-          <ul key={101}>
+          <ul key={102}>
             <li key={1}>
               <a href="https://calealinux.wordpress.com">
                 https://calealinux.wordpress.com
@@ -55,12 +73,7 @@ export function MegaHome({ images }: { images: MyImages }) {
               </a>
             </li>
           </ul>,
-        ]}
-      />
-
-      <ol>
-        <li>
-          <a href="https://stackexchange.com/users/94724">
+          <a key={103} href="https://stackexchange.com/users/94724">
             <Image
               src="https://stackexchange.com/users/flair/94724.png"
               width="208"
@@ -68,11 +81,8 @@ export function MegaHome({ images }: { images: MyImages }) {
               alt="profile for silviubogan on Stack Exchange, a network of free, community-driven Q&amp;A sites"
               title="profile for silviubogan on Stack Exchange, a network of free, community-driven Q&amp;A sites"
             />
-          </a>
-        </li>
-        <li>
-          <p>Am realizat filme pe YouTube:</p>
-          <ol>
+          </a>,
+          <ol key={104}>
             <li>
               Controlul versiunilor cu Git (teorie)
               <LiteYouTubeEmbed
@@ -151,74 +161,37 @@ export function MegaHome({ images }: { images: MyImages }) {
                 title="Analiza aplicației Weather pe Windows 10 (25.09.2016)"
               />
             </li>
-          </ol>
-        </li>
-        <li>
-          <p>
-            Am realizat în Electron{" "}
-            <a href="https://github.com/silviubogan/reminder-to-see">
-              un program
-            </a>{" "}
-            testat pe Linux și Windows care pune periodic utilizatorul să facă
-            clic pentru a continua, evitând orbecăirea.
-          </p>
-          <Gallery images={images.screenshot} />
-        </li>
-        <li>
-          Am realizat în WPF un joc educațional de tip blocuri de memorie:
-          <Gallery images={images.pozeJoc} />
-        </li>
-        <li>
-          Am realizat în WPF un joc educațional de tip snake:
-          <Gallery images={images.pozeJocSnake} />
-        </li>
-        <li>
-          Am realizat desene manuale:
-          <Gallery images={images.deseneManuale} />
-        </li>
-        <li>
-          Am realizat desene digitale:
-          <Gallery images={images.deseneDigitaleOriginale} />
-        </li>
-        <li>
-          Am realizat poze:
-          <Gallery images={images.poze} />
-        </li>
-        <li>
-          Am realizat grafică în GIMP:
-          <Gallery images={images.graficăÎnGimp} />
-        </li>
-        <li>
-          Am realizat teme WordPress:
-          <Gallery images={images.temeWordPress} />
-          și câteva site-uri pentru o afacere:
-          <Gallery images={images.afacereWordPress} />
-        </li>
-        <li>
-          Am realizat artă CSS:
-          <Gallery images={images.artăCss} />
-        </li>
-        <li>
-          Am realizat artă:
-          <Gallery images={images.artă} />
-        </li>
-        <li>
-          Pentru realizări am primit diplome, de exemplu:
-          <Gallery images={images.diplome} />
-        </li>
-        <li>
-          Am realizat postări pe blogul vechi:
-          <Gallery images={images.articoleBlogVechi} />
-        </li>
-        <li>
-          Am realizat cover-uri la melodii, ca:
-          <p>Vama Veche - Epilog (cover)</p>
-          <LiteYouTubeEmbed
-            id="YOHbc14l54c"
-            title="Vama Veche - Epilog (cover)"
-          />
-        </li>
-      </ol>
+          </ol>,
+          <React.Fragment key={1061}>
+            <p>
+              GitHub:{" "}
+              <a href="https://github.com/silviubogan/reminder-to-see">
+                <GitHubIcon /> remider-to-see
+              </a>
+            </p>
+            <Gallery key={105} images={images.screenshot} />
+          </React.Fragment>,
+          <Gallery key={106} images={images.pozeJoc} />,
+          <Gallery key={107} images={images.pozeJocSnake} />,
+          <Gallery key={108} images={images.deseneManuale} />,
+          <Gallery key={109} images={images.deseneDigitaleOriginale} />,
+          <Gallery key={110} images={images.poze} />,
+          <Gallery key={111} images={images.graficăÎnGimp} />,
+          <Gallery key={112} images={images.temeWordPress} />,
+          <Gallery key={113} images={images.afacereWordPress} />,
+          <Gallery key={114} images={images.artăCss} />,
+          <Gallery key={115} images={images.artă} />,
+          <Gallery key={116} images={images.diplome} />,
+          <Gallery key={117} images={images.articoleBlogVechi} />,
+          <React.Fragment key={118}>
+            <p>Vama Veche - Epilog (cover)</p>
+            <LiteYouTubeEmbed
+              id="YOHbc14l54c"
+              title="Vama Veche - Epilog (cover)"
+            />
+          </React.Fragment>,
+        ]}
+      />
       <footer className="list-footer">
         <p>
           Lucrez cu Manjaro, NeoVim, Git, GitHub, React, Next.js, TypeScript,
@@ -235,15 +208,7 @@ export function MegaHome({ images }: { images: MyImages }) {
         <p>
           Pe{" "}
           <a href="https://www.github.com/silviubogan">
-            <svg
-              width="1rem"
-              height="1rem"
-              viewBox="0 0 48 48" // here I intended 48 = 1rem (size of 1char)
-              style={{ display: "inline" }}
-            >
-              <path d="M24,1.9a21.6,21.6,0,0,0-6.8,42.2c1,.2,1.8-.9,1.8-1.8V39.4c-6,1.3-7.9-2.9-7.9-2.9a6.5,6.5,0,0,0-2.2-3.2C6.9,31.9,9,32,9,32a4.3,4.3,0,0,1,3.3,2c1.7,2.9,5.5,2.6,6.7,2.1a5.4,5.4,0,0,1,.5-2.9C12.7,32,9,28,9,22.6A10.7,10.7,0,0,1,11.9,15a6.2,6.2,0,0,1,.3-6.4,8.9,8.9,0,0,1,6.4,2.9,15.1,15.1,0,0,1,5.4-.8,17.1,17.1,0,0,1,5.4.7,9,9,0,0,1,6.4-2.8,6.5,6.5,0,0,1,.4,6.4A10.7,10.7,0,0,1,39,22.6C39,28,35.3,32,28.5,33.2a5.4,5.4,0,0,1,.5,2.9v6.2a1.8,1.8,0,0,0,1.9,1.8A21.7,21.7,0,0,0,24,1.9Z" />
-            </svg>{" "}
-            GitHub
+            <GitHubIcon /> GitHub
           </a>{" "}
           am câteva depozite interesante și contribuții la Volto.
         </p>
