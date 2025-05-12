@@ -12,7 +12,6 @@ export default async function MyHome() {
         src="https://cdn.jsdelivr.net/npm/cmatrix"
         strategy="beforeInteractive"
       />
-      ;
       <MyParticles />
       <Home images={img} />
     </>
