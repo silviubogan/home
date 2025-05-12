@@ -26,14 +26,28 @@ body {
   margin: 3rem;
 }
 
+@media (max-width: 768px) {
+  body {
+    margin: 1rem;
+  }
+}
+
 /* My styles */
 
 main {
   position: relative; /* for Particles.js canvas as background */
 }
 
+header {
+  display: flex;
+}
+
+header h1 {
+  width: 100%;
+}
+
 h1 {
-  font-size: 3.5rem;
+  font-size: 2rem;
 }
 
 a {
@@ -58,8 +72,7 @@ ol > li > ol {
 
 article.yt-lite {
   width: auto;
-  min-width: 20rem;
-  max-width: 30rem;
+  max-width: 500px;
 }
 
 .matrix-button > p {
@@ -94,6 +107,10 @@ article.yt-lite {
   transform: scale(1.5);
 }
 
+.accordion {
+  margin-left: 2rem;
+}
+
 .accordion-item-header {
   font-size: 1.5rem;
   font-weight: bold;
@@ -118,14 +135,14 @@ article.yt-lite {
 
 .accordion-item-content-container {
   border: 0.1rem solid #ccc;
+  width: 100%;
 }
 
 .accordion-item-content {
   font-size: 1rem;
-  margin: 1.5rem;
 }
 
-.accordion-item {
-  font-size: 1rem;
-  padding: 1rem;
+.accordion-item-header li {
+  margin: 0.5rem 0;
+  list-style-position: inside;
 }

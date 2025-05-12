@@ -12,6 +12,7 @@ import Accordion from "@/components/Accordion";
 
 import GitHubIcon from "@/components/GitHubIcon";
 import WikipediaIcon from "@/components/WikipediaIcon";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 import React from "react";
@@ -21,8 +22,7 @@ import React from "react";
 export function MegaHome({ images }: { images: MyImages }) {
   return (
     <main>
-      <h1>Portofoliu: Silviu Bogan</h1>
-      <Image src="avatar.jpg" width={250} height={150} alt="avatar" />
+      <Header />
       <Accordion
         headers={[
           "Am tradus din engleză în română",
