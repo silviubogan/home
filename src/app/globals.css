@@ -93,3 +93,39 @@ article.yt-lite {
 .matrix-button:hover {
   transform: scale(1.5);
 }
+
+.accordion-item-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border: 0.1rem solid #ccc;
+  user-select: none;
+}
+
+.accordion-item-header .accordion-item-header-icon {
+  transition: all 0.333s;
+}
+
+.accordion-item-header:hover .accordion-item-header-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-item-header:hover {
+  background-color: #f0f0f0;
+}
+
+.accordion-item-content-container {
+  border: 0.1rem solid #ccc;
+}
+
+.accordion-item-content {
+  font-size: 1rem;
+  margin: 1.5rem;
+}
+
+.accordion-item {
+  font-size: 1rem;
+  padding: 1rem;
+}
