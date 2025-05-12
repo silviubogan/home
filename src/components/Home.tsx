@@ -12,6 +12,7 @@ import { MyImages } from "@/lib/images";
 import Accordion from "@/components/Accordion";
 
 import GitHubIcon from "@/components/GitHubIcon";
+import WikipediaIcon from "@/components/WikipediaIcon";
 
 import React from "react";
 
@@ -42,6 +43,7 @@ export function MegaHome({ images }: { images: MyImages }) {
           "Pentru realizări am primit diplome, de exemplu",
           "Am realizat postări pe blogul vechi",
           "Am realizat cover-uri la melodii",
+          "Am realizat contribuții la Wikipedia română",
         ]}
         items={[
           <ol key={101}>
@@ -190,6 +192,12 @@ export function MegaHome({ images }: { images: MyImages }) {
               title="Vama Veche - Epilog (cover)"
             />
           </React.Fragment>,
+          <p key={119}>
+            Vedeți profilul meu ro.wikipedia.org aici:{" "}
+            <a href="https://ro.wikipedia.org/wiki/Utilizator:Silviubogan">
+              <WikipediaIcon /> Utilizator:Silviubogan
+            </a>
+          </p>,
         ]}
       />
       <footer className="list-footer">
