@@ -7,12 +7,12 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 import { Gallery } from "@/components/Gallery";
-import { MatrixButton } from "@/components/MatrixButton";
 import { MyImages } from "@/lib/images";
 import Accordion from "@/components/Accordion";
 
 import GitHubIcon from "@/components/GitHubIcon";
 import WikipediaIcon from "@/components/WikipediaIcon";
+import Footer from "@/components/Footer";
 
 import React from "react";
 
@@ -200,27 +200,7 @@ export function MegaHome({ images }: { images: MyImages }) {
           </p>,
         ]}
       />
-      <footer className="list-footer">
-        <p>
-          Lucrez cu Manjaro, NeoVim, Git, GitHub, React, Next.js, TypeScript,
-          HTML, CSS, JavaScript, Volto.
-        </p>
-        <p>
-          Contactați-mă{" "}
-          <MatrixButton
-            value="pe X (silviubogan)"
-            href="https://x.com/silviubogan"
-          />{" "}
-          pentru feedback, ajutor sau alte întrebări.
-        </p>
-        <p>
-          Pe{" "}
-          <a href="https://www.github.com/silviubogan">
-            <GitHubIcon /> GitHub
-          </a>{" "}
-          am câteva depozite interesante și contribuții la Volto.
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 }
