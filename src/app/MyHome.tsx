@@ -12,13 +12,12 @@ import Accordion from "@/components/Accordion";
 
 import GitHubIcon from "@/components/icons/GitHubIcon";
 import WikipediaIcon from "@/components/icons/WikipediaIcon";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "./Header";
+import Footer from "./Footer";
 
 import React from "react";
 
 // am scris poezii, inclusiv optimiste, în exportul de pe Facebook și silviubogan.com
-// TODO: study Next.js routing and group files in folders as they should be
 
 export function MyHome({ images }: { images: MyImages }) {
   return (

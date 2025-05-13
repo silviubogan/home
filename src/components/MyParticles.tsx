@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import type { Container, Engine } from "@tsparticles/engine";
+import type { /* Container, */ Engine } from "@tsparticles/engine";
 // import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
@@ -26,15 +26,15 @@ export const MyParticles: React.FC = () => {
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container | undefined) => {
-    console.log(container);
-  };
+  // const particlesLoaded = async (container?: Container | undefined) => {
+  //   console.log(container);
+  // };
 
   return (
     init && (
       <Particles
         id="tsparticles"
-        particlesLoaded={particlesLoaded}
+        // particlesLoaded={particlesLoaded}
         options={{
           background: {
             color: {
@@ -97,7 +97,7 @@ export const MyParticles: React.FC = () => {
                 //   enable: true,
                 // },
               },
-              value: 80,
+              value: 100,
             },
             opacity: {
               value: 0.5,

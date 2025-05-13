@@ -1,6 +1,6 @@
 import { getImages } from "@/lib/imageSizes";
-import { MyHome } from "../components/MyHome";
-import { MyParticles } from "../components/MyParticles";
+import { MyHome } from "./MyHome";
+import { MyParticles } from "@/components/MyParticles";
 import Script from "next/script";
 
 export default async function Home() {
