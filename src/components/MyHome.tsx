@@ -6,7 +6,7 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
-import { Gallery } from "@/components/Gallery";
+import { Gallery } from "@/components/Gallery/Gallery";
 import { MyImages } from "@/lib/images";
 import Accordion from "@/components/Accordion";
 

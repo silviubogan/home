@@ -1,6 +1,6 @@
 "use client";
 
-import { MyPhoto } from "../lib/images";
+import { MyPhoto } from "@/lib/images";
 import { FC, useState } from "react";
 import { MasonryPhotoAlbum } from "react-photo-album";
 import "react-photo-album/masonry.css";
@@ -14,7 +14,7 @@ import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
-import { renderNextImage } from "./GalleryNextImage";
+import { renderNextImage } from "./renderNextImage";
 
 export const Gallery: FC<{ images?: MyPhoto[] }> = ({
   images,
