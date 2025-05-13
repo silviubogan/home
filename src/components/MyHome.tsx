@@ -10,16 +10,14 @@ import { Gallery } from "@/components/Gallery";
 import { MyImages } from "@/lib/images";
 import Accordion from "@/components/Accordion";
 
-import GitHubIcon from "@/components/GitHubIcon";
-import WikipediaIcon from "@/components/WikipediaIcon";
+import GitHubIcon from "@/components/icons/GitHubIcon";
+import WikipediaIcon from "@/components/icons/WikipediaIcon";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 import React from "react";
 
 // am scris poezii, inclusiv optimiste, în exportul de pe Facebook și silviubogan.com
-// TODO: GitHubIcon & WikipediaIcon shoud use a LabeledIcon HOC with &nbsp;
-// between icon and label
 // TODO: study Next.js routing and group files in folders as they should be
 
 export function MyHome({ images }: { images: MyImages }) {
@@ -171,7 +169,7 @@ export function MyHome({ images }: { images: MyImages }) {
             <p>
               GitHub:{" "}
               <a href="https://github.com/silviubogan/reminder-to-see">
-                <GitHubIcon /> remider-to-see
+                <GitHubIcon label="remider-to-see" />
               </a>
             </p>
             <Gallery key={105} images={images.screenshot} />
@@ -198,7 +196,7 @@ export function MyHome({ images }: { images: MyImages }) {
           <p key={119}>
             Vedeți profilul meu ro.wikipedia.org aici:{" "}
             <a href="https://ro.wikipedia.org/wiki/Utilizator:Silviubogan">
-              <WikipediaIcon /> Utilizator:Silviubogan
+              <WikipediaIcon label="Utilizator:Silviubogan" />
             </a>
           </p>,
         ]}

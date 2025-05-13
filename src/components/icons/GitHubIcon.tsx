@@ -1,3 +1,5 @@
+import withLabel from "@/components/icons/withLabel";
+
 const GitHubIcon = () => (
   <svg
     width="1rem"
@@ -9,4 +11,4 @@ const GitHubIcon = () => (
   </svg>
 );
 
-export default GitHubIcon;
+export default withLabel(GitHubIcon);

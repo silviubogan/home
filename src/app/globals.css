@@ -146,15 +146,20 @@ article.yt-lite {
 }
 
 .accordion-item-content-container {
-  border: 0.1rem solid #ccc;
   width: 100%;
 }
 
 .accordion-item-content {
   font-size: 1rem;
+  padding: 1rem;
 }
 
-.accordion-item-header li {
+.accordion-item-content > ol > li,
+.accordion-item-content > ul > li {
   margin: 0.5rem 0;
   list-style-position: inside;
+}
+
+.accordion-item-content > ul > li {
+  list-style-type: disc;
 }

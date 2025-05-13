@@ -1,5 +1,5 @@
 import { MatrixButton } from "@/components/MatrixButton";
-import GitHubIcon from "@/components/GitHubIcon";
+import GitHubIcon from "@/components/icons/GitHubIcon";
 
 const Footer = () => {
   return (
@@ -19,7 +19,7 @@ const Footer = () => {
       <p>
         Pe{" "}
         <a href="https://www.github.com/silviubogan">
-          <GitHubIcon /> GitHub
+          <GitHubIcon label="GitHub" />
         </a>{" "}
         am câteva depozite interesante și contribuții la Volto.
       </p>

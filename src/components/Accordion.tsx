@@ -16,17 +16,14 @@ const Accordion = ({
   return (
     <ol className="accordion">
       {items.map((item, index) => (
-        <li
-          key={index}
-          style={{ fontWeight: "bold" }}
-          className="accordion-item-header"
-        >
+        <li key={index}>
           <div
             onClick={() => {
               const s = [...states];
               s[index] = !s[index];
               setStates(s);
             }}
+            className="accordion-item-header"
           >
             {headers[index]}
             <span className="accordion-item-header-icon">
@@ -34,14 +31,14 @@ const Accordion = ({
             </span>
           </div>
           <motion.div
-            initial={false}
+            initial={index === 0}
             animate={{
               height: states[index] ? "auto" : 0,
-              borderWidth: states[index] ? undefined : 0,
+              borderWidth: states[index] ? 1 : 0,
             }}
             transition={{ duration: 0.3 }}
             className="accordion-item-content-container"
-            style={{ overflow: "hidden" }}
+            style={{ overflow: "hidden", border: "1px solid #ccc" }}
           >
             <div className="accordion-item-content">{item}</div>
           </motion.div>

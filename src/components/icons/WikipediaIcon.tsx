@@ -1,3 +1,5 @@
+import withLabel from "@/components/icons/withLabel";
+
 const WikipediaIcon = () => (
   <svg
     height="1rem"
@@ -20,4 +22,4 @@ const WikipediaIcon = () => (
   </svg>
 );
 
-export default WikipediaIcon;
+export default withLabel(WikipediaIcon);
