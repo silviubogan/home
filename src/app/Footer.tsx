@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <footer className="list-footer">
       <p>
-        Lucrez cu Manjaro, NeoVim, Git, GitHub, React, Next.js, TypeScript,
-        HTML, CSS, JavaScript, Volto.
+        Lucrez cu Manjaro Linux, VS Code, Git, GitHub, React, Next.js, TypeScript,
+        HTML, CSS, JavaScript, Volto, Docker.
       </p>
       <p>
         Contactați-mă{" "}
