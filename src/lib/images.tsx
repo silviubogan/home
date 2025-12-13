@@ -56,7 +56,7 @@ export const poze: MyPhoto[] = [
 
 export const screenshot: MyPhoto[] = [
   {
-    src: "https://raw.githubusercontent.com/silviubogan/reminder-to-see/refs/heads/main/docs/example-screen.png",
+    src: "example-screen.png",
     alt: "captură de ecran",
   },
 ];
