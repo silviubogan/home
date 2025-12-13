@@ -33,12 +33,12 @@ footer, header {
 
 .gh-icon {
   display: inline;
-  fill: white;
+  fill: black;
 }
 
 .wpd-icon {
   display: inline;
-  background-color: white;
+  background-color: black;
   border-radius: 25%;
 }
 
@@ -61,11 +61,11 @@ footer, header {
   }
 
   .gh-icon {
-    fill: black;
+    fill: white;
   }
 
   .wpd-icon {
-    background-color: black;
+    background-color: white;
   }
 }
 
