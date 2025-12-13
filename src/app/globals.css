@@ -31,6 +31,17 @@ footer, header {
   color: var(--foreground);
 }
 
+.gh-icon {
+  display: inline;
+  fill: white;
+}
+
+.wpd-icon {
+  display: inline;
+  background-color: white;
+  border-radius: 25%;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -47,6 +58,14 @@ footer, header {
 
   body {
     color: steelblue;
+  }
+
+  .gh-icon {
+    fill: black;
+  }
+
+  .wpd-icon {
+    background-color: black;
   }
 }
 
