@@ -33,8 +33,16 @@ async function downloadFile(url: string, to: string) {
 }
 
 async function imageDataFromUrl(imgUrl: string): Promise<Omit<MyPhoto, "src">> {
-  const folder = "image-cache/";
-  const n = imgUrl.replace(/\//g, "\\");
+  let folder, n;
+  if (process.platform === 'win32') {
+    folder = "public\\image-cache\\";
+    n = linuxUrlToWinPlaceableUrl(imgUrl);
+  } else if (process.platform === 'linux') {
+    folder = "public/image-cache/";
+    n = imgUrl.replace(/\//g, "\\");
+  } else {
+    throw new Error('Unsupported platform.');
+  }
   const np = folder + n;
   const v = existsSync(folder);
   if (!v) {
@@ -47,26 +55,36 @@ async function imageDataFromUrl(imgUrl: string): Promise<Omit<MyPhoto, "src">> {
   return { width: c.width, height: c.height };
 }
 
+export const linuxUrlToWinPlaceableUrl = (l: string) => {
+  return l.replace(":", "").replace(/\//g, "");
+};
+
+export const isUrl = (l: string) => {
+  return l.startsWith("https://") || l.startsWith("http://");
+};
+
 export const getImages = async (): Promise<MyImages> => {
   const fill = async (x: MyPhoto) => {
     const path = "public/" + x.src;
     const d = await imageSizeFromFile(path);
     x.width = d.width;
     x.height = d.height;
-    return { ...x };
+    return x;
   };
 
   const map = async (arr: MyPhoto[]) => {
     const arr2: Promise<MyPhoto>[] = [];
     const subpromises: Promise<MyPhoto>[] = [];
     arr.forEach((e) => {
-      if (e.src.startsWith("https://") || e.src.startsWith("http://")) {
-        const i = imageDataFromUrl(e.src);
+      if (isUrl(e.src)) {
+        const linuxUrl = e.src;
+        const winSrc = linuxUrlToWinPlaceableUrl(linuxUrl);
+        const i = imageDataFromUrl(linuxUrl);
         const p = i.then(
           async (s) => {
             const pp = new Promise<MyPhoto>((resolve) => {
               resolve({
-                src: e.src,
+                src: '/image-cache/' + winSrc,
                 width: s.width,
                 height: s.height,
               });

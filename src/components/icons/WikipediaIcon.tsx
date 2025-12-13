@@ -5,7 +5,11 @@ const WikipediaIcon = () => (
     height="1rem"
     width="1rem"
     viewBox="0 0 458.723 458.723"
-    style={{ display: "inline" }}
+    style={{
+      display: "inline",
+      backgroundColor: "white",
+      borderRadius: "50%"
+    }}
   >
     <path
       style={{ fill: "#222A30" }}
