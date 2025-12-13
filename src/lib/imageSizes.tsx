@@ -20,6 +20,7 @@ import { imageSizeFromFile } from "image-size/fromFile";
 import { existsSync, mkdirSync } from "node:fs";
 import { writeFile } from "node:fs/promises";
 import { Readable } from "node:stream";
+import { join } from "node:path";
 
 async function downloadFile(url: string, to: string) {
   const res = await fetch(url);
@@ -35,10 +36,10 @@ async function downloadFile(url: string, to: string) {
 async function imageDataFromUrl(imgUrl: string): Promise<Omit<MyPhoto, "src">> {
   let folder, n;
   if (process.platform === 'win32') {
-    folder = "public\\image-cache\\";
+    folder = "image-cache\\";
     n = linuxUrlToWinPlaceableUrl(imgUrl);
   } else if (process.platform === 'linux') {
-    folder = "public/image-cache/";
+    folder = "image-cache/";
     n = imgUrl.replace(/\//g, "\\");
   } else {
     throw new Error('Unsupported platform.');
@@ -65,7 +66,7 @@ export const isUrl = (l: string) => {
 
 export const getImages = async (): Promise<MyImages> => {
   const fill = async (x: MyPhoto) => {
-    const path = "public/" + x.src;
+    const path = join('public', x.src);
     const d = await imageSizeFromFile(path);
     x.width = d.width;
     x.height = d.height;
@@ -78,13 +79,13 @@ export const getImages = async (): Promise<MyImages> => {
     arr.forEach((e) => {
       if (isUrl(e.src)) {
         const linuxUrl = e.src;
-        const winSrc = linuxUrlToWinPlaceableUrl(linuxUrl);
+        // const winSrc = linuxUrlToWinPlaceableUrl(linuxUrl);
         const i = imageDataFromUrl(linuxUrl);
         const p = i.then(
           async (s) => {
             const pp = new Promise<MyPhoto>((resolve) => {
               resolve({
-                src: 'public/image-cache/' + winSrc,
+                src: linuxUrl,
                 width: s.width,
                 height: s.height,
               });
