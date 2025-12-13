@@ -32,7 +32,7 @@ export const Gallery: FC<{ images?: MyPhoto[] }> = ({
       <MasonryPhotoAlbum
         key={images[0].src}
         photos={images.map((x) => ({
-          src: x.src,
+          src: 'image-cache/' + x.src,
           width: x.width || 0,
           height: x.height || 0,
           alt: x.alt || undefined,
