@@ -84,7 +84,7 @@ export const getImages = async (): Promise<MyImages> => {
           async (s) => {
             const pp = new Promise<MyPhoto>((resolve) => {
               resolve({
-                src: '/image-cache/' + winSrc,
+                src: 'image-cache/' + winSrc,
                 width: s.width,
                 height: s.height,
               });
