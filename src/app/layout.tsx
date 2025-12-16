@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Portofoliul lui Silviu Bogan",
-  description: "Pagină în lucru",
+  description: "Portofoliul lui Silviu Bogan, dezvoltator de pagini & aplicații pe Internet. Tutoriale React în pregătire.",
 };
 
 export default function RootLayout({

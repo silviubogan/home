@@ -26,10 +26,11 @@ export function MyHome({ images }: { images: MyImages }) {
       <Accordion
         headers={[
           "Am tradus din engleză în română",
-          "Am postat articole pe blogurile",
-          "Am adunat scor pe StackExchange (inclusiv StackOverflow)",
+          "Am postat pe blogurile",
+          "Am adunat scor pe StackExchange (mai ales StackOverflow)",
           "Am realizat filme pe YouTube",
-          "Am realizat în Electron un program testat pe Linux și Windows care pune periodic utilizatorul să facă clic pentru a continua, evitând orbecăirea",
+          "Am realizat în Electron un program testat pe Linux și Windows care pune " +
+            "periodic utilizatorul să facă click pentru a continua, evitând orbecăirea",
           "Am realizat în WPF un joc educațional de tip blocuri de memorie",
           "Am realizat în WPF un joc educațional de tip snake",
           "Am realizat desene manuale",
@@ -49,7 +50,7 @@ export function MyHome({ images }: { images: MyImages }) {
           <ol key={101}>
             <li key={1}>
               <a href="https://wiki.manjaro.org/index.php/Main_Page/ro">
-                pagina principală a Wiki-ului Linux Manjaro
+                pagina de start a Wiki-ului Linux Manjaro
               </a>
             </li>
             <li key={2}>
@@ -93,10 +94,10 @@ export function MyHome({ images }: { images: MyImages }) {
               />
             </li>
             <li>
-              Un început de proiect Turnurile din Hanoi în Unity
+              Început de proiect Turnurile din Hanoi în Unity
               <LiteYouTubeEmbed
                 id="itq3OVe3pqs"
-                title="Un început de proiect Turnurile din Hanoi în Unity"
+                title="Început de proiect Turnurile din Hanoi în Unity"
               />
             </li>
             <li>
@@ -168,10 +169,10 @@ export function MyHome({ images }: { images: MyImages }) {
             <p>
               GitHub:{" "}
               <a href="https://github.com/silviubogan/reminder-to-see">
-                <GitHubIcon label="remider-to-see" />
+                <GitHubIcon label="reminder-to-see" />
               </a>
             </p>
-            <Gallery key={105} images={images.screenshot} />
+            <Gallery images={images.screenshot} />
           </React.Fragment>,
           <Gallery key={106} images={images.pozeJoc} />,
           <Gallery key={107} images={images.pozeJocSnake} />,
