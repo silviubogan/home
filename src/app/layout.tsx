@@ -1,6 +1,12 @@
+
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import NavMenu from "./NavMenu";
+import Script from "next/script";
+import { MyParticles } from "@/components/MyParticles";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +20,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Portofoliul lui Silviu Bogan",
-  description: "Portofoliul lui Silviu Bogan, dezvoltator de pagini & aplicații pe Internet. Tutoriale React în pregătire.",
+  description: "Portofoliul lui Silviu Bogan, dezvoltator de pagini & aplicații pe Internet. " +
+    "Tutoriale React în pregătire.",
 };
 
 export default function RootLayout({
@@ -27,7 +34,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header>
+          <h1>Silviu Bogan</h1>
+          <Image src="avatar.jpg" width={250} height={150} alt="avatar" className="photo-logo" />
+          <NavMenu />
+        </header>
         {children}
+        <Script
+          src="https://cdn.jsdelivr.net/npm/cmatrix"
+          strategy="beforeInteractive"
+        />
+        <MyParticles />
       </body>
     </html>
   );

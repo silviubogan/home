@@ -12,7 +12,6 @@ import Accordion from "@/components/Accordion";
 
 import GitHubIcon from "@/components/icons/GitHubIcon";
 import WikipediaIcon from "@/components/icons/WikipediaIcon";
-import Header from "./Header";
 import Footer from "./Footer";
 
 import React from "react";
@@ -22,7 +21,6 @@ import React from "react";
 export function MyHome({ images }: { images: MyImages }) {
   return (
     <main>
-      <Header />
       <Accordion
         headers={[
           "Am tradus din engleză în română",

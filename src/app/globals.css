@@ -12,12 +12,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-a {
+main a {
   color: blue;
-}
 
-a:hover {
-  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 body {
@@ -27,7 +27,8 @@ body {
   margin: 3rem;
 }
 
-footer, header {
+footer,
+header {
   color: var(--foreground);
 }
 
@@ -46,18 +47,20 @@ footer, header {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-  }
 
-  a {
-      color: lightblue;
-  }
+    main {
+      color: steelblue;
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
+    body {
+      a {
+        color: lightblue;
 
-  body {
-    color: steelblue;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 
   .gh-icon {
@@ -69,45 +72,53 @@ footer, header {
   }
 }
 
-@media (max-width: 768px) {
-  body {
-    margin: 1rem;
-  }
-}
-
-/* My styles */
-
 main {
-  position: relative; /* for Particles.js canvas as background */
-}
-
-header h1 {
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-}
-
-header img {
-  margin: auto auto;
-  padding: 1rem;
+  position: relative;
+  /* for Particles.js canvas as background */
 }
 
 h1 {
-  font-size: 2rem;
-  word-break: break-all;
+  font-size: 4rem;
+  word-break: keep-all;
   text-align: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  img {
+    margin: auto auto;
+    padding: 1rem;
+  }
+
+  h1 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 1rem;
+
+    header {
+      display: block;
+
+      h1 {
+        font-size: 1.5rem;
+        word-break: keep-all;
+      }
+    }
+  }
 }
 
 ol {
   list-style-type: decimal;
-}
 
-ol > li > ol {
-  margin-left: 1rem;
+  &>li>ol {
+    margin-left: 1rem;
+  }
 }
 
 .list-footer {
@@ -117,22 +128,6 @@ ol > li > ol {
 article.yt-lite {
   width: auto;
   max-width: 500px;
-}
-
-.matrix-button > p {
-  text-align: center;
-  width: 125%;
-  align-self: center;
-  color: white;
-  font-weight: bold;
-  z-index: 1;
-}
-
-.matrix-button > canvas {
-  position: absolute;
-  align-self: center;
-  width: 125%;
-  height: 3rem;
 }
 
 .matrix-button {
@@ -145,14 +140,30 @@ article.yt-lite {
   justify-content: center;
   margin: 2rem;
   transition: transform 0.5s;
-}
 
-.matrix-button:hover {
-  transform: scale(1.5);
-}
+  &:hover {
+    transform: scale(1.5);
+  }
 
-.accordion {
-  margin-left: 2rem;
+  &>p {
+    text-align: center;
+    width: 125%;
+    align-self: center;
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+  }
+
+  &>canvas {
+    position: absolute;
+    align-self: center;
+    width: 125%;
+    height: 3rem;
+  }
+
+  .accordion {
+    margin-left: 2rem;
+  }
 }
 
 .accordion-item-header {
@@ -163,18 +174,15 @@ article.yt-lite {
   background-color: #f9f9f9;
   border: 0.1rem solid #ccc;
   user-select: none;
-}
 
-.accordion-item-header .accordion-item-header-icon {
-  transition: all 0.333s;
-}
+  &:hover {
+    background-color: #f0f0f0;
+  }
 
-.accordion-item-header:hover .accordion-item-header-icon {
-  transform: rotate(180deg);
-}
-
-.accordion-item-header:hover {
-  background-color: #f0f0f0;
+  .accordion-item-header-icon {
+    transition: all 0.333s;
+    transform: rotate(180deg);
+  }
 }
 
 .accordion-item-content-container {
@@ -184,14 +192,42 @@ article.yt-lite {
 .accordion-item-content {
   font-size: 1rem;
   padding: 1rem;
+
+  &>ol>li,
+  &>ul>li {
+    margin: 0.5rem 0;
+    list-style-position: inside;
+    list-style-type: disc;
+  }
 }
 
-.accordion-item-content > ol > li,
-.accordion-item-content > ul > li {
-  margin: 0.5rem 0;
-  list-style-position: inside;
+#tsparticles {
+  position: absolute;
+  z-index: -1;
 }
 
-.accordion-item-content > ul > li {
-  list-style-type: disc;
+nav.top-nav {
+  ul {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    li {
+      padding: 0.5rem 1rem;
+      text-align: center;
+
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+h2 {
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }

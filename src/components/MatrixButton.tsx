@@ -1,5 +1,7 @@
 import { useRef, useEffect, useCallback } from "react";
 
+declare const matrix: any;
+
 export const MatrixButton: React.FC<{
   href?: string;
   value?: string;
@@ -10,10 +12,7 @@ export const MatrixButton: React.FC<{
   useEffect(() => {
     if (bRef.current && cRef.current) {
       const { width, height } = bRef.current.getBoundingClientRect();
-
-      // @ts-expect-error matrix is loaded with a separate script tag in HTML
-      // so its type is not known (the issue is the missing @types/cmatrix package
-      // in npm)
+      
       matrix(cRef.current, {
         chars: "aăâbcdefghiîjklmnopqrsștțuvwxyzAĂÂBCDEFGHIÎJKLMNOPQRSȘTȚUVWXYZ",
         //matrix.range(0x30a1, 0x30f6).concat(matrix.range(0x0030, 0x0039)),
