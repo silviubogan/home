@@ -12,7 +12,6 @@ import Accordion from "@/components/Accordion";
 
 import GitHubIcon from "@/components/icons/GitHubIcon";
 import WikipediaIcon from "@/components/icons/WikipediaIcon";
-import Footer from "./Footer";
 
 import React from "react";
 
