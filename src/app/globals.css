@@ -231,3 +231,17 @@ h2 {
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
+
+h3 {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.pp-D6U2KM8LALZLJ{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}
