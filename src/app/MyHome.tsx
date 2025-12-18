@@ -199,7 +199,6 @@ export function MyHome({ images }: { images: MyImages }) {
           </p>,
         ]}
       />
-      <Footer />
     </main>
   );
 }

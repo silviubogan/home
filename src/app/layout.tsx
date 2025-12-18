@@ -7,6 +7,8 @@ import Image from "next/image";
 import NavMenu from "./NavMenu";
 import Script from "next/script";
 import { MyParticles } from "@/components/MyParticles";
+import Footer from "./Footer";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,11 +37,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header>
-          <h1>Silviu Bogan</h1>
-          <Image src="avatar.jpg" width={250} height={150} alt="avatar" className="photo-logo" />
+          <h1><Link href="/">Silviu Bogan</Link></h1>
+          <Link href="/"><Image src="avatar.jpg" width={250} height={150} alt="avatar" className="photo-logo" /></Link>
           <NavMenu />
         </header>
         {children}
+        <Footer />
         <Script
           src="https://cdn.jsdelivr.net/npm/cmatrix"
           strategy="beforeInteractive"

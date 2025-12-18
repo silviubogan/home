@@ -1,5 +1,4 @@
 import CodeBlock from '@/components/CodeBlock';
-import Image from 'next/image';
 
 export default function Home() {
   return <article>
@@ -28,14 +27,7 @@ export default function Home() {
       Fie că lucrați singur ori cu mii de alți dezvoltatori, a folosi React se simte la fel.
       Este proiectat să vă lase să combinați fără să vreți componente scrise de oameni, echipe și organizații independente.
     </p>
-    
-    <p><em>Va urma.</em></p>
 
-    <form action="https://www.paypal.com/ncp/payment/D6U2KM8LALZLJ" method="post" target="_blank"
-        style={{ display: "inline-grid", justifyItems: "center", alignContent: "start", gap: "0.5rem" }}>
-      <input className="pp-D6U2KM8LALZLJ" type="submit" value="Cumpără-mi o cafea" />
-      <Image src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" width={100} height={100} />
-      <section style={{ fontSize: "0.75rem" }}> Prin <strong>PayPal</strong></section>
-    </form>
+    <p><em>Va urma.</em></p>
   </article>;
 }
