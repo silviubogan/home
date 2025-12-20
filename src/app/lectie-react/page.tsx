@@ -27,6 +27,37 @@ export default function Home() {
       Fie că lucrați singur ori cu mii de alți dezvoltatori, a folosi React se simte la fel.
       Este proiectat să vă lase să combinați fără să vreți componente scrise de oameni, echipe și organizații independente.
     </p>
+    <h3>Scrieți componente cu cod și limbaj de marcare</h3>
+    <p>
+      Componentele React sunt funcții JavaScript.
+      Vreți să afișați condițional niște conținut?
+      Folosiți o instrucțiune <code>if</code>.
+      Afișați o listă?
+      Folosiți funcția <code>map()</code> a tabloului.
+      Învățați React învățând programare.
+    </p>
+    <p><strong>ListăVideo.js</strong></p>
+    <CodeBlock block={`function ListăVideo({ videouri, antetGol }) {
+  const număr = videouri.length;
+  let antet = antetGol;
+  if (număr > 0) {
+    const substantiv = număr > 1 ? 'Videouri' : 'Video';
+    antet = număr + ' ' + substantiv;
+  }
+  return (
+    <section>
+      <h2>{antet}</h2>
+      {videouri.map(video =>
+        <Video key={video.id} video={video} />
+      )}
+    </section>
+  );
+}`} />
+    <p>
+      Această sintaxă de marcare se cheamă JSX.
+      Ea este o extensie a sintaxei JavaScript popularizată de React.
+      Punând marcajul JSX aproape de conexa logică de randare face componentele React ușor de creat, menținut și șters.
+    </p>
 
     <p><em>Va urma.</em></p>
   </article>;
