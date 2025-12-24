@@ -10,6 +10,7 @@ export const CodeBlock = ({ block }: { block?: string }) => (
         {({ style, tokens, getLineProps, getTokenProps }) => {
             const o = Object.assign({}, style, {
                 padding: "1rem",
+                overflowX: "auto",
             });
             return (
                 <pre style={o}>

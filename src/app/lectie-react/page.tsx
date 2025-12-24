@@ -58,6 +58,30 @@ export default function Home() {
       Ea este o extensie a sintaxei JavaScript popularizată de React.
       Punând marcajul JSX aproape de conexa logică de randare face componentele React ușor de creat, menținut și șters.
     </p>
+    <h3>Adăugați interactivitate oriunde aveți nevoie</h3>
+    <p>Componentele React primesc date și întorc ce ar trebui să apară pe ecran. Puteți să le pasați noi date, cum ar fi când utilizatorul tastează într-un câmp. React apoi va actualiza ecranul să reflecte datele noi.</p>
+    <p><strong>ListăVideoCăutabilă.js</strong></p>
+    <CodeBlock block={`import { useState } from 'react';
+
+function ListăVideoCăutabilă({ videouri }) {
+  const [termen, setTermen] = useState('');
+  const videouriGăsite = filtreazăVideouri(videouri, termen);
+  return (
+    <>
+      <CâmpCăutare
+        valoare={termen}
+        laSchimbare={(termenNou) => setTermen(termenNou)} />
+      <ListăVideo
+        videouri={videouriGăsite}
+        antetGol={\`Niciun rezultat pentru "\${termen}"\`} />
+    </>
+  );
+}`} />
+    <p>
+      Nu trebuie să construiți întreaga dumneavoastră pagină în React.
+      Adăugați React la pagina dumneavoastră existentă HTML, și randați componente React interactive oriunde în ea.
+    </p>
+    <p><strong><a href="#">Adaugă React în pagina ta (TODO)</a></strong></p>
 
     <p><em>Va urma.</em></p>
   </article>;
