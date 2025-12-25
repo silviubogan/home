@@ -43,23 +43,73 @@ header {
   border-radius: 25%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.theme-switcher {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 
-    main {
-      color: steelblue;
+  ul {
+    list-style-type: none;
+    position: absolute;
+    top: 3rem;
+    z-index: 1;
+
+    li {
+      display: block;
     }
 
-    body {
-      a {
-        color: lightblue;
+    li button {
+      color: black;
+      background-color: white;
+      padding: 0.5rem 1rem;
+      box-sizing: border-box;
+      border: 0.1rem solid black;
+      cursor: pointer;
+      width: 100%;
 
-        &:hover {
-          text-decoration: underline;
-        }
+      &.active {
+        font-weight: bold;
+        background-color: darkgray;
       }
+    }
+  }
+
+  .menu-button {
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0rem;
+    font-weight: bold;
+    border: 0.1rem solid black;
+  }
+}
+
+[data-theme='dark'] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+
+  main {
+    color: steelblue;
+  }
+
+  body {
+    a {
+      color: lightblue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .theme-switcher .menu-button {
+      color: white;
+      background-color: black;
+      border: 0.1rem solid white;
+    }
+
+    .theme-switcher ul li button {
+      border: 0.1rem solid black;
     }
   }
 
@@ -109,6 +159,14 @@ header {
         font-size: 1.5rem;
         word-break: keep-all;
       }
+    }
+
+    nav.top-nav ul {
+      margin-bottom: 2rem;
+    }
+
+    .theme-switcher .menu-button {
+      margin-bottom: 1rem;
     }
   }
 }
@@ -217,7 +275,6 @@ article.yt-lite {
 
 nav.top-nav {
   ul {
-    margin-bottom: 2rem;
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -253,4 +310,18 @@ p {
   line-height: 1.6;
 }
 
-.pp-D6U2KM8LALZLJ{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}
+.pp-D6U2KM8LALZLJ {
+  text-align: center;
+  border: none;
+  border-radius: 0.25rem;
+  min-width: 11.625rem;
+  padding: 0 2rem;
+  height: 2.625rem;
+  font-weight: bold;
+  background-color: #FFD140;
+  color: #000000;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  cursor: pointer;
+}

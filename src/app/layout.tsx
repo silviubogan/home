@@ -7,6 +7,8 @@ import Script from "next/script";
 import { MyParticles } from "@/components/MyParticles";
 import Footer from "./Footer";
 import Link from "next/link";
+import { ThemeProvider } from "next-themes";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,22 +32,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ro">
+    <html lang="ro" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header>
-          <h1><Link href="/">Silviu Bogan</Link></h1>
-          <Link href="/"><Image src="avatar.jpg" width={250} height={150} alt="avatar" className="photo-logo" /></Link>
-          <NavMenu />
-        </header>
-        {children}
-        <Footer />
-        <Script
-          src="https://cdn.jsdelivr.net/npm/cmatrix"
-          strategy="beforeInteractive"
-        />
-        <MyParticles />
+        <ThemeProvider>
+          <header>
+            <h1><Link href="/">Silviu Bogan</Link></h1>
+            <Link href="/"><Image src="avatar.jpg" width={250} height={150} alt="avatar" className="photo-logo" /></Link>
+            <NavMenu />
+            <ThemeSwitcher />
+          </header>
+          {children}
+          <Footer />
+          <Script
+            src="https://cdn.jsdelivr.net/npm/cmatrix"
+            strategy="beforeInteractive"
+          />
+          <MyParticles />
+        </ThemeProvider>
       </body>
     </html>
   );
