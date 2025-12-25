@@ -9,12 +9,12 @@ export function useOnClickOutside<T extends HTMLElement>(
     const events = options?.events ?? ['pointerdown'];
     const listener = (event: Event) => {
       let doHide = true;
-      for (let ref of refs) {
+      for (const ref of refs) {
         const el = ref?.current;
         if (!el) continue;
 
         // Support Shadow DOM
-        const path = (event as any).composedPath?.() as EventTarget[] | undefined;
+        const path = (event as { composedPath?: () => EventTarget[] }).composedPath?.() as EventTarget[] | undefined;
         const clickedInside = path ? path.includes(el) : el.contains(event.target as Node);
         if (!clickedInside) {
           doHide &&= true;
