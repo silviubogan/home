@@ -1,87 +1,118 @@
-@import "tailwindcss";
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-main a {
-  color: blue;
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 3rem;
 
-  &:hover {
-    text-decoration: underline;
-  }
-}
+    ol {
+      list-style-type: decimal;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 3rem;
-}
-
-footer,
-header {
-  color: var(--foreground);
-}
-
-.gh-icon {
-  display: inline;
-  fill: black;
-}
-
-.wpd-icon {
-  display: inline;
-  background-color: black;
-  border-radius: 25%;
-}
-
-.theme-switcher {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-
-  ul {
-    list-style-type: none;
-    position: absolute;
-    top: 3rem;
-    z-index: 1;
-
-    li {
-      display: block;
-    }
-
-    li button {
-      color: black;
-      background-color: white;
-      padding: 0.5rem 1rem;
-      box-sizing: border-box;
-      border: 0.1rem solid black;
-      cursor: pointer;
-      width: 100%;
-
-      &.active {
-        font-weight: bold;
-        background-color: darkgray;
+      &>li>ol {
+        margin-left: 1rem;
       }
     }
-  }
 
-  .menu-button {
-    cursor: pointer;
-    padding: 0.75rem 1rem;
-    margin-bottom: 0rem;
-    font-weight: bold;
-    border: 0.1rem solid black;
+    .theme-switcher {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      ul {
+        list-style-type: none;
+        position: absolute;
+        top: 3rem;
+        z-index: 1;
+
+        li {
+          display: block;
+        }
+
+        li button {
+          color: black;
+          background-color: white;
+          padding: 0.5rem 1rem;
+          box-sizing: border-box;
+          border: 0.1rem solid black;
+          cursor: pointer;
+          width: 100%;
+
+          &.active {
+            font-weight: bold;
+            background-color: darkgray;
+          }
+        }
+      }
+
+      .menu-button {
+        cursor: pointer;
+        padding: 0.75rem 1rem;
+        margin-bottom: 0rem;
+        font-weight: bold;
+        border: 0.1rem solid black;
+      }
+    }
+
+    footer,
+    header {
+      color: var(--foreground);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      img {
+        margin: auto auto;
+        padding: 1rem;
+      }
+
+      h1 {
+        width: 100%;
+        font-size: 4rem;
+        word-break: keep-all;
+        text-align: center;
+
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+
+    main {
+      position: relative;
+      /* for Particles.js canvas as background */
+
+      a {
+        color: blue;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .gh-icon {
+      display: inline;
+      fill: black;
+    }
+
+    .wpd-icon {
+      display: inline;
+      background-color: black;
+      border-radius: 25%;
+    }
   }
 }
 
@@ -89,11 +120,11 @@ header {
   --background: #0a0a0a;
   --foreground: #ededed;
 
-  main {
-    color: steelblue;
-  }
-
   body {
+    main {
+      color: steelblue;
+    }
+
     a {
       color: lightblue;
 
@@ -102,14 +133,16 @@ header {
       }
     }
 
-    .theme-switcher .menu-button {
-      color: white;
-      background-color: black;
-      border: 0.1rem solid white;
-    }
+    .theme-switcher {
+      .menu-button {
+        color: white;
+        background-color: black;
+        border: 0.1rem solid white;
+      }
 
-    .theme-switcher ul li button {
-      border: 0.1rem solid black;
+      ul li button {
+        border: 0.1rem solid black;
+      }
     }
   }
 
@@ -119,32 +152,6 @@ header {
 
   .wpd-icon {
     background-color: white;
-  }
-}
-
-main {
-  position: relative;
-  /* for Particles.js canvas as background */
-}
-
-h1 {
-  font-size: 4rem;
-  word-break: keep-all;
-  text-align: center;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-
-  img {
-    margin: auto auto;
-    padding: 1rem;
-  }
-
-  h1 {
-    width: 100%;
   }
 }
 
@@ -168,14 +175,6 @@ header {
     .theme-switcher .menu-button {
       margin-bottom: 1rem;
     }
-  }
-}
-
-ol {
-  list-style-type: decimal;
-
-  &>li>ol {
-    margin-left: 1rem;
   }
 }
 
