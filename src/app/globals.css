@@ -1,8 +1,10 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --background: white;
+  --light-accent-color: lightblue;
+  --foreground: black;
+  --accent-color: #184f7d;
+  --headers-color: black;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
@@ -11,6 +13,10 @@
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
     margin: 3rem;
+          
+    li::marker {
+      color: var(--accent-color);
+    }
 
     ol {
       list-style-type: decimal;
@@ -18,6 +24,10 @@
       &>li>ol {
         margin-left: 1rem;
       }
+    }
+
+    .accordion {
+      padding-left: 1rem;
     }
 
     .theme-switcher {
@@ -35,20 +45,28 @@
 
         li {
           display: block;
-        }
+          padding: 0;
 
-        li button {
-          color: black;
-          background-color: white;
-          padding: 0.5rem 1rem;
-          box-sizing: border-box;
-          border: 0.1rem solid black;
-          cursor: pointer;
-          width: 100%;
-
-          &.active {
+          button {
+            color: black;
+            background-color: white;
+            padding: 0.5rem 1rem;
+            box-sizing: border-box;
+            border: 0.1rem solid black;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.333s;
             font-weight: bold;
-            background-color: darkgray;
+
+            &:hover {
+              background-color: green;
+              color: var(--foreground);
+            }
+
+            &.active {
+              background-color: green;
+              color: var(--foreground);
+            }
           }
         }
       }
@@ -59,12 +77,14 @@
         margin-bottom: 0rem;
         font-weight: bold;
         border: 0.1rem solid black;
-      }
-    }
+        background-color: white;
+        transition: all 0.333s;
 
-    footer,
-    header {
-      color: var(--foreground);
+        &:hover, &.active {
+          background-color: green;
+          color: var(--foreground);
+        }
+      }
     }
 
     header {
@@ -82,9 +102,10 @@
         font-size: 4rem;
         word-break: keep-all;
         text-align: center;
+        margin: 0;
 
         a {
-          color: black;
+          color: var(--headers-color);
           text-decoration: none;
         }
       }
@@ -93,14 +114,6 @@
     main {
       position: relative;
       /* for Particles.js canvas as background */
-
-      a {
-        color: blue;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
     }
 
     .gh-icon {
@@ -117,16 +130,23 @@
 }
 
 [data-theme='dark'] {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: black;
+  --light-accent-color: lightblue;
+  --foreground: white;
+  --accent-color: rgb(24, 79, 125);
+  --headers-color: white;
 
   body {
     main {
-      color: steelblue;
+      color: var(--foreground);
+    }
+
+    li::marker {
+      color: var(--light-accent-color);
     }
 
     a {
-      color: lightblue;
+      color: var(--light-accent-color);
 
       &:hover {
         text-decoration: underline;
@@ -135,8 +155,8 @@
 
     .theme-switcher {
       .menu-button {
-        color: white;
-        background-color: black;
+        color: var(--foreground);
+        background-color: var(--background);
         border: 0.1rem solid white;
       }
 
@@ -153,6 +173,12 @@
   .wpd-icon {
     background-color: white;
   }
+
+  .accordion-item-header {
+    &:hover {
+      background-color: var(--foreground);
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -160,16 +186,12 @@
     margin: 1rem;
 
     header {
-      display: block;
+      flex-direction: column;
 
       h1 {
         font-size: 1.5rem;
         word-break: keep-all;
       }
-    }
-
-    nav.top-nav ul {
-      margin-bottom: 2rem;
     }
 
     .theme-switcher .menu-button {
@@ -206,6 +228,8 @@ article.yt-lite {
   justify-content: center;
   margin: 2rem;
   transition: transform 0.5s;
+  background: none;
+  border: none;
 
   &:hover {
     transform: scale(1.5);
@@ -226,10 +250,6 @@ article.yt-lite {
     width: 125%;
     height: 3rem;
   }
-
-  .accordion {
-    margin-left: 2rem;
-  }
 }
 
 .accordion-item-header {
@@ -237,12 +257,15 @@ article.yt-lite {
   font-weight: bold;
   padding: 1rem;
   cursor: pointer;
-  background-color: #f9f9f9;
+  background-color: var(--light-accent-color);
   border: 0.1rem solid #ccc;
   user-select: none;
+  color: var(--accent-color);
+  transition: 0.333s background-color, 0.333s color;
 
   &:hover {
-    background-color: #f0f0f0;
+    background-color: var(--accent-color);
+    color: var(--background);
   }
 
   .accordion-item-header-icon {
@@ -277,15 +300,21 @@ nav.top-nav {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
 
     li {
-      padding: 0.5rem 1rem;
+      padding: 1rem 1rem;
       text-align: center;
 
       a {
         font-weight: bold;
         text-decoration: none;
         white-space: nowrap;
+        color: var(--foreground);
       }
     }
   }

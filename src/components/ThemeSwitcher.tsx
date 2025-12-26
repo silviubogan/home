@@ -13,23 +13,29 @@ export function ThemeSwitcher() {
   useOnClickOutside(refs as RefObject<HTMLElement>[], () => setShowMenu(false));
   const doLight = useCallback(() => {
     setTheme('light');
+    setShowMenu(false);
   }, [setTheme]);
   const doDark = useCallback(() => {
     setTheme('dark');
+    setShowMenu(false);
+  }, [setTheme]);
+  const doSystem = useCallback(() => {
+    setTheme('system');
+    setShowMenu(false);
   }, [setTheme]);
 
   return (<>
     <div className='theme-switcher' style={{
         position: 'relative',
     }}>
-    <button className='menu-button' onClick={() => {
+    <button className={`menu-button ${showMenu ? 'active' : ''}`} onClick={() => {
       setShowMenu(!showMenu)
     }} style={{
-    }} ref={ref as RefObject<HTMLButtonElement>}>Aspect</button>
+    }} ref={ref as RefObject<HTMLButtonElement>}>(aspect)</button>
     <ul style={{
       display: showMenu ? 'block' : 'none',
     }} ref={ref2 as RefObject<HTMLUListElement>}>
-      <li><button suppressHydrationWarning onClick={() => setTheme('system')}>Sistem</button></li>
+      <li><button suppressHydrationWarning onClick={doSystem}>Sistem</button></li>
       <li><button suppressHydrationWarning className={theme === 'light' ? 'active' : ''} onClick={doLight}>🌞</button></li>
       <li><button suppressHydrationWarning className={theme === 'dark' ? 'active' : ''} onClick={doDark}>🌜</button></li>
     </ul>

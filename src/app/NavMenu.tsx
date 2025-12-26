@@ -1,5 +1,6 @@
 "use client";
 
+import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -15,11 +16,12 @@ export default function NavMenu() {
     <ul>
       {
         Object.entries(links).map(([name, href]) => (
-          <li key={href} style={{ color: pn === href ? 'white' : '', backgroundColor: pn === href ? '#184f7d' : '' }}>
-            <Link href={href}>{name}</Link>
+          <li key={href} style={{ backgroundColor: pn === href ? 'var(--accent-color)' : '' }}>
+            <Link href={href} style={{ color: pn === href ? 'white' : '' }}>{name}</Link>
           </li>
         ))
       }
+      <ThemeSwitcher />
     </ul>
   </nav>;
 }

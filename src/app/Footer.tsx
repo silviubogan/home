@@ -8,7 +8,7 @@ const Footer = () => {
       <form action="https://www.paypal.com/ncp/payment/D6U2KM8LALZLJ" method="post" target="_blank"
         style={{ display: "inline-grid", justifyItems: "center", alignContent: "start", gap: "0.5rem", marginTop: "1rem" }}>
         <input className="pp-D6U2KM8LALZLJ" type="submit" value="Cumpără-mi o cafea" />
-        <Image src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" width={100} height={100} />
+        <Image src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" width={140} height={20} />
         <section style={{ fontSize: "0.75rem" }}> Prin <strong>PayPal</strong></section>
       </form>
       <p>
