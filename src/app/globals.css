@@ -12,9 +12,9 @@
     margin: 3rem;
 
     pre {
-      font-family: var(--font-geist-mono), 'Courier New', Courier, monospace;
+      font-family: var(--font-geist-mono), "Courier New", Courier, monospace;
     }
-          
+
     li::marker {
       color: var(--accent-color);
     }
@@ -22,7 +22,7 @@
     ol {
       list-style-type: decimal;
 
-      &>li>ol {
+      & > li > ol {
         margin-left: 1rem;
       }
     }
@@ -81,7 +81,8 @@
         background-color: white;
         transition: all 0.333s;
 
-        &:hover, &.active {
+        &:hover,
+        &.active {
           background-color: green;
           color: var(--background);
         }
@@ -130,7 +131,7 @@
   }
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   --background: black;
   --light-accent-color: lightblue;
   --foreground: white;
@@ -160,7 +161,8 @@
         background-color: black;
         border: 0.1rem solid white;
 
-        &:hover, &.active {
+        &:hover,
+        &.active {
           background-color: green;
           color: white;
         }
@@ -241,7 +243,7 @@ article.yt-lite {
     transform: scale(1.5);
   }
 
-  &>p {
+  & > p {
     text-align: center;
     width: 125%;
     align-self: center;
@@ -250,7 +252,7 @@ article.yt-lite {
     z-index: 1;
   }
 
-  &>canvas {
+  & > canvas {
     position: absolute;
     align-self: center;
     width: 125%;
@@ -267,7 +269,9 @@ article.yt-lite {
   border: 0.1rem solid #ccc;
   user-select: none;
   color: var(--accent-color);
-  transition: 0.333s background-color, 0.333s color;
+  transition:
+    0.333s background-color,
+    0.333s color;
 
   &:hover {
     background-color: var(--accent-color);
@@ -288,8 +292,8 @@ article.yt-lite {
   font-size: 1rem;
   padding: 1rem;
 
-  &>ol>li,
-  &>ul>li {
+  & > ol > li,
+  & > ul > li {
     margin: 0.5rem 0;
     list-style-position: inside;
     list-style-type: disc;
@@ -352,7 +356,7 @@ p {
   padding: 0 2rem;
   height: 2.625rem;
   font-weight: bold;
-  background-color: #FFD140;
+  background-color: #ffd140;
   color: #000000;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
