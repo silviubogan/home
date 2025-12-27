@@ -82,7 +82,7 @@
 
         &:hover, &.active {
           background-color: green;
-          color: var(--foreground);
+          color: var(--background);
         }
       }
     }
@@ -155,9 +155,14 @@
 
     .theme-switcher {
       .menu-button {
-        color: var(--foreground);
-        background-color: var(--background);
+        color: white;
+        background-color: black;
         border: 0.1rem solid white;
+
+        &:hover, &.active {
+          background-color: green;
+          color: white;
+        }
       }
 
       ul li button {
