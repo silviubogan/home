@@ -38,7 +38,6 @@ const Accordion = ({
             }}
             transition={{ duration: 0.3 }}
             className="accordion-item-content-container"
-            style={{ overflow: "hidden", border: "1px solid #ccc" }}
           >
             <div className="accordion-item-content">{item}</div>
           </motion.div>

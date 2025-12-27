@@ -21,10 +21,15 @@
 
     ol {
       list-style-type: decimal;
+      padding-left: 0;
 
       & > li > ol {
         margin-left: 1rem;
       }
+    }
+
+    ul {
+      padding-left: 0;
     }
 
     .accordion {
@@ -286,6 +291,8 @@ article.yt-lite {
 
 .accordion-item-content-container {
   width: 100%;
+  overflow: auto;
+  border: 1px solid #ccc;
 }
 
 .accordion-item-content {
