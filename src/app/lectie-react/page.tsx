@@ -83,6 +83,39 @@ function ListăVideoCăutabilă({ videouri }) {
     </p>
     <p><strong><a href="#">Adaugă React în pagina ta (TODO)</a></strong></p>
 
+    <h3>
+      Alege <abbr title="full-stack">stiva-plină</abbr> cu o{" "}
+      <abbr title="framework">platformă de lucru</abbr>
+    </h3>
+    <p>
+      React este o bibliotecă.
+      Vă permite să puneți componente laolaltă, dar ea nu prescrie cum să se facă rutarea și preluarea datelor.
+      Ca să construiți o aplicație întreagă cu React, recomandăm o platformă de lucru React stivă-plină cum ar fi <a href="https://nextjs.org/">Next.js</a> ori <a href="https://reactrouter.com/">React Router</a>.
+    </p>
+    <p><strong>conferințe/[prescurtare].js</strong></p>
+    <CodeBlock block={`import { bd } from './baza-de-date.js';
+import { Suspense } from 'react';
+
+async function PaginăConferință({ prescurtare }) {
+  const conf = await bd.Conferințe.find({ prescurtare });
+  return (
+    <AspectConferință conf={conf}>
+      <Suspense fallback={<ÎncărcareDiscursuri />}
+        <Discursuri idConf={conf.id} />
+      </Suspense>
+    </AspectConferință>
+  );
+}
+
+async function Discursuri({ idConf }) {
+  const discursuri = await bd.Discursuri.findAll({ idConf });
+  const videouri = discursuri.map(discurs => discurs.video);
+  return <ListăVideoCăutabilă videouri={videouri} />;
+}`} />
+    <p>
+      
+    </p>
+
     <p><em>Va urma.</em></p>
   </article>;
 }
