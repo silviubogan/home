@@ -113,8 +113,11 @@ async function Discursuri({ idConf }) {
   return <ListăVideoCăutabilă videouri={videouri} />;
 }`} />
     <p>
-      
+      React este și o arhitectură.
+      Platformele de lucru care o implementează vă permit să preluați date în componente asincrone care se execută pe server ori chiar în timpul <abbr title="build">construcției</abbr>.
+      Citiți date dintr-un fișier ori o bază de date, și pasați-le în jos componentelor dumneavoastră interactive.
     </p>
+    <p><strong><a href="#">Începeți cu o platformă de lucru (TODO)</a></strong></p>
 
     <p><em>Va urma.</em></p>
   </article>;
