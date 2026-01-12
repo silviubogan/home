@@ -213,11 +213,17 @@
   }
 }
 
+.before-footer-separator {
+  box-shadow: 0rem 0 1rem var(--light-accent-color);
+  background-color: var(--light-accent-color);
+  height: 0.1rem;
+  margin-left: -3rem;
+  margin-right: -3rem;
+}
+
 .list-footer {
   margin-left: 3rem;
   margin-right: 3rem;
-  margin-top: 1rem;
-  border-top: solid 0.5rem gray;
 
   form {
     margin-left: auto;

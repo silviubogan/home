@@ -42,6 +42,7 @@ export default function RootLayout({
             <NavMenu />
           </header>
           {children}
+          <div className="before-footer-separator" />
           <Footer />
           <Script
             src="https://cdn.jsdelivr.net/npm/cmatrix"
