@@ -1,8 +1,20 @@
 "use client";
 
 import CodeBlock from "@/components/CodeBlock";
-import React, { useRef } from "react";
+import React, { useCallback, useRef } from "react";
 import useAnchor from "react-use-anchor";
+
+function TocToggleButton({ showToc, setShowToc }: { showToc: boolean; setShowToc: () => void }) {
+  return (
+    <button
+      onClick={() => {
+        setShowToc();
+      }}
+    >
+      {showToc ? "Închide »" : "Afișează «"}
+    </button>
+  );
+}
 
 export default function Home() {
   const viewPortRef = useRef<HTMLDivElement>(null);
@@ -15,6 +27,12 @@ export default function Home() {
     heading: "h3",
     options: { rootMargin: "0% 0% 0% 0%" },
   });
+
+  const onToggleToc = useCallback(() => {
+    setShowAside(!showAside);
+  }, [showAside]);
+  const tocActiveClassName = "toc-active";
+  const tocInactiveClassName = "toc-inactive";
 
   return (
     <>
@@ -35,7 +53,7 @@ export default function Home() {
                 Therefore, visibleIds[0] will always represent the first section visible in the viewport.
               */
                 className={`${
-                  visibleIds2[0] === heading.id ? "toc-active" : "toc-inactive"
+                  visibleIds2[0] === heading.id ? tocActiveClassName : tocInactiveClassName
                 }`}
               >
                 {heading.title}
@@ -52,7 +70,7 @@ export default function Home() {
                       Therefore, visibleIds[0] will always represent the first section visible in the viewport.
                     */
                       className={`${
-                        visibleIds3[0] === h.id ? "toc-active" : "toc-inactive"
+                        visibleIds3[0] === h.id ? tocActiveClassName : tocInactiveClassName
                       }`}
                     >
                       {h.title}
@@ -62,13 +80,7 @@ export default function Home() {
             </React.Fragment>
           ))}
         </nav>
-        <button
-          onClick={() => {
-            setShowAside(!showAside);
-          }}
-        >
-          {showAside ? "Închide »" : "Afișează «"}
-        </button>
+        <TocToggleButton showToc={showAside} setShowToc={onToggleToc} />
       </aside>
       <div className="viewport" ref={viewPortRef}>
         <div ref={containerRef3}>
