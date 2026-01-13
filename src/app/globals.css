@@ -357,6 +357,7 @@ nav.current-toc {
   max-width: 200px;
   margin-left: -3rem;
   border-radius: 0;
+  overflow: auto;
 
   a {
     display: block;

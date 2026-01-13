@@ -251,6 +251,8 @@ async function Discursuri({ idConf }) {
                 <a href="#">Începeți cu o platformă de lucru (TODO)</a>
               </strong>
             </p>
+            
+            <h3 id="ce-este-react-folositi-ce-e-cel-mai-bun">Folosiți ce e cel mai bun din fiecare platformă</h3>
 
             <p>
               <em>Va urma.</em>
