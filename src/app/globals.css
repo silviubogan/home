@@ -4,12 +4,13 @@
   --foreground: black;
   --accent-color: #184f7d;
   --headers-color: black;
+  --body-margin-left-right: 3rem;
 
   body {
     background: var(--background);
     color: var(--foreground);
     font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-    margin: 3rem;
+    margin: var(--body-margin-left-right);
 
     pre {
       font-family: var(--font-geist-mono), "Courier New", Courier, monospace;
@@ -48,6 +49,7 @@
         position: absolute;
         top: 3rem;
         z-index: 1;
+        border: 1px solid green;
 
         li {
           display: block;
@@ -58,7 +60,7 @@
             background-color: white;
             padding: 0.5rem 1rem;
             box-sizing: border-box;
-            border: 0.1rem solid black;
+            border: none;
             cursor: pointer;
             width: 100%;
             transition: all 0.333s;
@@ -82,7 +84,7 @@
         padding: 0.75rem 1rem;
         margin-bottom: 0rem;
         font-weight: bold;
-        border: 0.1rem solid black;
+        border: none;
         background-color: white;
         transition: all 0.333s;
 
@@ -213,7 +215,7 @@
   }
 }
 
-.before-footer-separator {
+.header-footer-separator {
   box-shadow: 0rem 0 1rem var(--light-accent-color);
   background-color: var(--light-accent-color);
   height: 0.1rem;
@@ -338,8 +340,52 @@ nav.top-nav {
         text-decoration: none;
         white-space: nowrap;
         color: var(--foreground);
+
+        &:hover, &:focus {
+          text-decoration: underline;
+        }
       }
     }
+  }
+}
+
+nav.current-toc {
+  padding: 1rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 0.5rem;
+  background-color: var(--background);
+  max-width: 200px;
+  margin-left: -3rem;
+  border-radius: 0;
+
+  a {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: var(--foreground);
+
+    &.toc-active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    &.toc-inactive {
+      font-weight: normal;
+    }
+  }
+}
+
+.toc-aside {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  right: 0;
+  max-height: 50vh;
+
+  button {
+    font-size: 1rem;
+    margin-left: calc(-var(--body-margin-left-right));
   }
 }
 

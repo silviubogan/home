@@ -41,8 +41,9 @@ export default function RootLayout({
             <Link href="/"><Image src="avatar.jpg" width={467 / 3} height={467 / 3} alt="avatar" className="photo-logo" /></Link>
             <NavMenu />
           </header>
+          <div className="header-footer-separator" />
           {children}
-          <div className="before-footer-separator" />
+          <div className="header-footer-separator" />
           <Footer />
           <Script
             src="https://cdn.jsdelivr.net/npm/cmatrix"
