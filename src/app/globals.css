@@ -383,6 +383,7 @@ nav.current-toc {
   bottom: 0;
   right: 0;
   max-height: 50vh;
+  z-index: 1;
 
   button {
     font-size: 1rem;
