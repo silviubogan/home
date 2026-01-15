@@ -132,14 +132,14 @@
 
     .wpd-icon {
       display: inline;
-      background-color: black;
+      background-color: white;
       border-radius: 25%;
     }
   }
 }
 
-[data-theme="dark"] {
-  --background: black;
+:root[data-theme="dark"] {
+  --background: rgb(0, 20, 36);
   --light-accent-color: lightblue;
   --foreground: white;
   --accent-color: rgb(24, 79, 125);
@@ -299,7 +299,7 @@ article.yt-lite {
 
 .accordion-item-content-container {
   width: 100%;
-  overflow: auto;
+  overflow: hidden;
   border: 1px solid #ccc;
 }
 
@@ -312,6 +312,7 @@ article.yt-lite {
     margin: 0.5rem 0;
     list-style-position: inside;
     list-style-type: disc;
+    word-break: break-all;
   }
 }
 
