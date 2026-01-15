@@ -253,6 +253,9 @@ async function Discursuri({ idConf }) {
             </p>
             
             <h3 id="ce-este-react-folositi-ce-e-cel-mai-bun">Folosiți ce e cel mai bun din fiecare platformă</h3>
+            <p>Oamenii iubesc aplicațiile rulate în navigator și pe cele native din motive diferite. React vă permite să construiți din ambele categorii folosind aceleași abilități. Ea se sprijină pe punctele forte ale fiecărei platforme să permită interfețelor dumneavoastră să se simtă potrivit pe fiecare platformă.</p>
+
+            <h4 id="ce-este-react-ramai-fidel-navigatorului">Rămâi fidel navigatorului</h4>
 
             <p>
               <em>Va urma.</em>
