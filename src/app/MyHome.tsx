@@ -20,6 +20,17 @@ import React from "react";
 export function MyHome({ images }: { images: MyImages }) {
   return (
     <main>
+      <p>
+        Lucrez cu VS Code, Git, GitHub, React, Next.js, TypeScript, HTML, CSS,
+        Node.js, NPM. (În trecut cu foarte multe altele.)
+      </p>
+      <p>
+        Pe{" "}
+        <a href="https://www.github.com/silviubogan">
+          <GitHubIcon label="GitHub" />
+        </a>{" "}
+        am unele depozite interesante și contribuții.
+      </p>
       <Accordion
         headers={[
           "Am tradus din engleză în română",

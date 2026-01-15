@@ -21,7 +21,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Silviu Bogan (oficial)",
-  description: "Silviu Bogan, dezvoltator de pagini & aplicații pe Internet. " +
+  description:
+    "Silviu Bogan, dezvoltator de pagini & aplicații pe Internet. " +
     "Tutoriale React în lucru.",
 };
 
@@ -37,8 +38,28 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <header>
-            <h1><Link href="/">Silviu Bogan</Link></h1>
-            <Link href="/"><Image src="avatar.jpg" width={467 / 3} height={467 / 3} alt="avatar" className="photo-logo" /></Link>
+            <h1>
+              <Link href="/">Silviu Bogan</Link>
+              <p
+                style={{
+                  lineHeight: 1,
+                  fontSize: "1.23rem",
+                }}
+              >
+                <small>
+                  <em>Dezvoltator de site-uri</em>
+                </small>
+              </p>
+            </h1>
+            <Link href="/">
+              <Image
+                src="avatar.jpg"
+                width={467 / 3}
+                height={467 / 3}
+                alt="avatar"
+                className="photo-logo"
+              />
+            </Link>
             <NavMenu />
           </header>
           <div className="header-footer-separator" />

@@ -247,7 +247,7 @@ article.yt-lite {
   color: white;
   cursor: pointer;
   justify-content: center;
-  margin: 2rem;
+  margin: 0 2rem;
   transition: transform 0.5s;
   background: none;
   border: none;

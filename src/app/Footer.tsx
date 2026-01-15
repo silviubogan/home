@@ -34,23 +34,12 @@ const Footer = () => {
         </section>
       </form>
       <p>
-        Lucrez cu VS Code, Git, GitHub, React, Next.js, TypeScript, HTML, CSS,
-        Node.js, NPM. (În trecut cu foarte multe altele.)
-      </p>
-      <p>
         Luați legătura cu mine{" "}
         <MatrixButton
           value="pe X (silviubogan)"
           href="https://x.com/silviubogan"
         />{" "}
         pentru păreri, ajutor ori un site de Internet.
-      </p>
-      <p>
-        Pe{" "}
-        <a href="https://www.github.com/silviubogan">
-          <GitHubIcon label="GitHub" />
-        </a>{" "}
-        am unele depozite interesante și contribuții la Volto.
       </p>
       <p>
         Raportați probleme ale site-ului (și dați-mi steluță!){" "}
