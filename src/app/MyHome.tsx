@@ -22,7 +22,7 @@ export function MyHome({ images }: { images: MyImages }) {
     <main>
       <p>
         Lucrez cu VS Code, Git, GitHub, React, Next.js, TypeScript, HTML, CSS,
-        Node.js, NPM. (În trecut cu foarte multe altele.)
+        Node.js, NPM, Phaser. (În trecut cu foarte multe altele.)
       </p>
       <p>
         Pe{" "}
@@ -30,6 +30,14 @@ export function MyHome({ images }: { images: MyImages }) {
           <GitHubIcon label="GitHub" />
         </a>{" "}
         am unele depozite interesante și contribuții.
+      </p>
+      <p>
+        Clic aici pentru a mă susține pe Patreon:
+        <a href="https://patreon.com/SilviuBogan?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">
+          <img src="https://i.imgur.com/hL5qxJN.png"
+            alt="Imagine cu link către pagina mea Patreon"
+            style={{ width: "100%"}} />
+        </a>
       </p>
       <Accordion
         headers={[
