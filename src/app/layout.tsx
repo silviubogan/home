@@ -3,11 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import NavMenu from "./NavMenu";
-import Script from "next/script";
 import { MyParticles } from "@/components/MyParticles";
 import Footer from "./Footer";
 import Link from "next/link";
 import { ThemeProvider } from "next-themes";
+import { CMatrixScript } from '@/components/CMatrixScript';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,6 +58,7 @@ export default function RootLayout({
                 height={467 / 3}
                 alt="avatar"
                 className="photo-logo"
+                loading="eager"
               />
             </Link>
             <NavMenu />
@@ -66,10 +67,7 @@ export default function RootLayout({
           {children}
           <div className="header-footer-separator" />
           <Footer />
-          <Script
-            src="https://cdn.jsdelivr.net/npm/cmatrix"
-            strategy="beforeInteractive"
-          />
+          <CMatrixScript />
           <MyParticles />
         </ThemeProvider>
       </body>
