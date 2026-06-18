@@ -189,6 +189,14 @@
     background-color: white;
   }
 
+  .fb-icon {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 1rem;
+    background-color: white;
+    padding: 0.1rem;
+  }
+
   .accordion-item-header {
     &:hover {
       background-color: var(--foreground);
