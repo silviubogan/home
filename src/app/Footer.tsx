@@ -48,7 +48,7 @@ const Footer = () => {
         </a>
         .
       </p>
-      <p style={{ textAlign: "center" }}>© 2025 Silviu Bogan</p>
+      <p style={{ textAlign: "center" }}>© 2025-2026 Silviu Bogan</p>
     </footer>
   );
 };
