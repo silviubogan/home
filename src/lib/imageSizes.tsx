@@ -34,16 +34,9 @@ async function downloadFile(url: string, to: string) {
 }
 
 async function imageDataFromUrl(imgUrl: string): Promise<Omit<MyPhoto, "src">> {
-  let folder, n;
-  if (process.platform === 'win32') {
-    folder = "image-cache\\";
-    n = linuxUrlToWinPlaceableUrl(imgUrl);
-  } else if (process.platform === 'linux') {
-    folder = "image-cache/";
-    n = imgUrl.replace(/\//g, "\\");
-  } else {
-    throw new Error('Unsupported platform.');
-  }
+  const folder = "image-cache/"; // supposing we work only in linux environments
+  const n = imgUrl.replace(/\//g, "\\");
+
   const np = folder + n;
   const v = existsSync(folder);
   if (!v) {
