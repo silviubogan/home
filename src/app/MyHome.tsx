@@ -23,7 +23,7 @@ export function MyHome({ images }: { images: MyImages }) {
     <main>
       <p>
         Lucrez cu VS Code, Git, GitHub, React, Next.js, TypeScript, HTML, CSS,
-        Node.js, NPM, Phaser. (În trecut cu foarte multe altele.)
+        Node.js, NPM, Volto, Phaser. (În trecut cu foarte multe altele.)
       </p>
       <p>
         Pe{" "}
@@ -79,6 +79,7 @@ export function MyHome({ images }: { images: MyImages }) {
           "Am realizat postări pe blogul vechi",
           "Am realizat cover-uri la melodii",
           "Am realizat contribuții la Wikipedia română",
+          "Am fost angajat de 3 ori",
         ]}
         items={[
           <ol key={101}>
@@ -232,6 +233,9 @@ export function MyHome({ images }: { images: MyImages }) {
             <a href="https://ro.wikipedia.org/wiki/Utilizator:Silviubogan">
               <WikipediaIcon label="Utilizator:Silviubogan" />
             </a>
+          </p>,
+          <p key={120}>
+            Primele 2 firme au fost: jillix, EDW.
           </p>,
         ]}
       />

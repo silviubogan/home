@@ -130,6 +130,13 @@
       fill: black;
     }
 
+    .fb-icon {
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 1rem;
+      padding: 0.1rem;
+    }
+
     .wpd-icon {
       display: inline;
       background-color: white;
@@ -190,11 +197,7 @@
   }
 
   .fb-icon {
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 1rem;
     background-color: white;
-    padding: 0.1rem;
   }
 
   .accordion-item-header {
@@ -302,6 +305,7 @@ article.yt-lite {
   .accordion-item-header-icon {
     transition: all 0.333s;
     transform: rotate(180deg);
+    margin-left: 0.5rem;
   }
 }
 
