@@ -1,6 +1,6 @@
-import { MatrixButton } from "@/components/MatrixButton";
 import GitHubIcon from "@/components/icons/GitHubIcon";
 import Image from "next/image";
+import FacebookIcon from "@/components/icons/FacebookIcon"; 
 
 const Footer = () => {
   return (
@@ -34,12 +34,9 @@ const Footer = () => {
         </section>
       </form>
       <p>
-        Luați legătura cu mine{" "}
-        <MatrixButton
-          value="pe X (silviubogan)"
-          href="https://x.com/silviubogan"
-        />{" "}
-        pentru păreri, ajutor ori un site de Internet.
+        Puteți lua legătura cu mine <a href="https://www.facebook.com/lprAqjj87310luLXY88V">
+          <FacebookIcon label="pe Facebook" />
+        </a> pentru păreri, ajutor ori un site de Internet.
       </p>
       <p>
         Raportați probleme ale site-ului (și dați-mi steluță!){" "}

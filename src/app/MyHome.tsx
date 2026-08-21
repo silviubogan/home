@@ -14,7 +14,6 @@ import GitHubIcon from "@/components/icons/GitHubIcon";
 import WikipediaIcon from "@/components/icons/WikipediaIcon";
 
 import React from "react";
-import FacebookIcon from "@/components/icons/FacebookIcon";
 
 // am scris poezii, inclusiv optimiste, în exportul de pe Facebook și silviubogan.com
 
@@ -23,7 +22,7 @@ export function MyHome({ images }: { images: MyImages }) {
     <main>
       <p>
         Lucrez cu VS Code, Git, GitHub, React, Next.js, TypeScript, HTML, CSS,
-        Node.js, NPM, Volto, Phaser. (În trecut cu foarte multe altele.)
+        Node.js, P/NPM, Volto. (În trecut cu foarte multe altele.)
       </p>
       <p>
         Pe{" "}
@@ -31,13 +30,6 @@ export function MyHome({ images }: { images: MyImages }) {
           <GitHubIcon label="GitHub" />
         </a>{" "}
         am unele depozite interesante și contribuții.
-      </p>
-      <p>
-        Fac un live{" "}
-        <a href="https://www.facebook.com/lprAqjj87310luLXY88V">
-          <FacebookIcon label="pe Facebook" />
-        </a>{" "}
-        aproape zilnic, de 30 de minute, în jurul orei 21. Puteți să-mi dați Follow.
       </p>
       <p>
         Clic aici pentru a mă susține pe Patreon:

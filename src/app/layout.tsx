@@ -38,6 +38,16 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <header>
+            <Link href="/">
+              <Image
+                src="avatar.jpg"
+                width={467 / 3}
+                height={467 / 3}
+                alt="avatar"
+                className="photo-logo"
+                loading="eager"
+              />
+            </Link>
             <h1>
               <Link href="/">Silviu Bogan</Link>
               <p
@@ -51,16 +61,6 @@ export default function RootLayout({
                 </small>
               </p>
             </h1>
-            <Link href="/">
-              <Image
-                src="avatar.jpg"
-                width={467 / 3}
-                height={467 / 3}
-                alt="avatar"
-                className="photo-logo"
-                loading="eager"
-              />
-            </Link>
             <NavMenu />
           </header>
           <div className="header-footer-separator" />

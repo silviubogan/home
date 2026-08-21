@@ -3,6 +3,7 @@
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import cx from 'classnames';
 
 const links = {
   "Acasă": "/",
@@ -16,8 +17,8 @@ export default function NavMenu() {
     <ul>
       {
         Object.entries(links).map(([name, href]) => (
-          <li key={href} style={{ backgroundColor: pn === href ? 'var(--accent-color)' : '' }}>
-            <Link href={href} style={{ color: pn === href ? 'white' : '' }}>{name}</Link>
+          <li key={href} className={cx({ "active-nav-item": pn === href })} >
+            <Link href={href} className={cx({ "active-nav-link": pn === href })}>{name}</Link>
           </li>
         ))
       }

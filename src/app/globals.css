@@ -100,10 +100,12 @@
       display: flex;
       align-items: center;
       gap: 20px;
+      padding-bottom: 1rem;
 
       img {
         margin: auto auto;
-        padding: 1rem;
+        border-radius: 2rem;
+        box-shadow: 0 0 1rem white;
       }
 
       h1 {
@@ -359,6 +361,14 @@ nav.top-nav {
         }
       }
     }
+  }
+  
+  .active-nav-item {
+    background-color: var(--accent-color);
+  }
+
+  .active-nav-link {
+    color: white;
   }
 }
 
