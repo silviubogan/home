@@ -1,29 +1,26 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Image from "next/image";
-import NavMenu from "./NavMenu";
-import { MyParticles } from "@/components/MyParticles";
-import Footer from "./Footer";
-import Link from "next/link";
-import { ThemeProvider } from "next-themes";
-import { CMatrixScript } from '@/components/CMatrixScript';
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import Image from 'next/image';
+import NavMenu from './NavMenu';
+import { MyParticles } from '@/components/MyParticles';
+import Footer from './Footer';
+import Link from 'next/link';
+import { ThemeProvider } from 'next-themes';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Silviu Bogan (oficial)",
-  description:
-    "Silviu Bogan, dezvoltator de pagini & aplicații pe Internet. " +
-    "Tutoriale React în lucru.",
+  title: 'Silviu Bogan (oficial) | Portofoliu, blog, link-uri',
+  description: 'Silviu Bogan, dezvoltator de pagini & aplicații pe Internet.',
 };
 
 export default function RootLayout({
@@ -53,7 +50,7 @@ export default function RootLayout({
               <p
                 style={{
                   lineHeight: 1,
-                  fontSize: "1.23rem",
+                  fontSize: '1.23rem',
                 }}
               >
                 <small>
@@ -67,7 +64,7 @@ export default function RootLayout({
           {children}
           <div className="header-footer-separator" />
           <Footer />
-          <CMatrixScript />
+          {/* <CMatrixScript /> */}
           <MyParticles />
         </ThemeProvider>
       </body>

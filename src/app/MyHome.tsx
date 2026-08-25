@@ -22,7 +22,7 @@ export function MyHome({ images }: { images: MyImages }) {
     <main>
       <p>
         Lucrez cu VS Code, Git, GitHub, React, Next.js, TypeScript, HTML, CSS,
-        Node.js, P/NPM, Volto. (În trecut cu foarte multe altele.)
+        Node.js, P/NPM, Volto. <small>(În trecut cu foarte multe altele.)</small>
       </p>
       <p>
         Pe{" "}
@@ -44,6 +44,7 @@ export function MyHome({ images }: { images: MyImages }) {
               marginLeft: "auto",
               marginRight: "auto",
               height: "auto",
+              maxWidth: "100%",
             }}
           />
         </a>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import cx from "classnames";
 
 const Accordion = ({
   items,
@@ -13,6 +14,8 @@ const Accordion = ({
     ...new Array(items.length - 1).fill(false),
   ]);
 
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   return (
     <ol className="accordion">
       {items.map((item, index) => (
@@ -23,18 +26,21 @@ const Accordion = ({
               s[index] = !s[index];
               setStates(s);
             }}
-            className="accordion-item-header"
+            className={cx("accordion-item-header", { active: states[index] })}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
           >
-            {headers[index]}
-            <span className="accordion-item-header-icon">
-              {states[index] ? "▼" : "▲"}
-            </span>
+            <div>{headers[index]}</div>
+            <span
+              className={cx("accordion-item-header-icon", { "item-header-hovered": hoveredIndex === index })}
+            >▼</span>
           </div>
           <motion.div
             initial={index === 0}
             animate={{
               height: states[index] ? "auto" : 0,
               borderWidth: states[index] ? 1 : 0,
+              opacity: states[index] ? 1 : 0,
             }}
             transition={{ duration: 0.3 }}
             className="accordion-item-content-container"

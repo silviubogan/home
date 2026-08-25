@@ -4,7 +4,15 @@
   --foreground: black;
   --accent-color: #184f7d;
   --headers-color: black;
-  --body-margin-left-right: 3rem;
+  --body-margin-left-right: 1rem;
+  --accordion-item-header-icon-color: yellow;
+  --accordion-item-content-container-box-shadow-color: var(
+    --light-accent-color
+  );
+
+  @media screen and (min-width: 768px) {
+    --body-margin-left-right: 3rem;
+  }
 
   body {
     background: var(--background);
@@ -13,7 +21,7 @@
     margin: var(--body-margin-left-right);
 
     pre {
-      font-family: var(--font-geist-mono), "Courier New", Courier, monospace;
+      font-family: var(--font-geist-mono), 'Courier New', Courier, monospace;
     }
 
     li::marker {
@@ -147,12 +155,16 @@
   }
 }
 
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   --background: rgb(0, 20, 36);
   --light-accent-color: lightblue;
   --foreground: white;
   --accent-color: rgb(24, 79, 125);
   --headers-color: white;
+  --accordion-item-header-icon-color: blue;
+  --accordion-item-content-container-box-shadow-color: var(
+    --light-accent-color
+  );
 
   body {
     main {
@@ -287,7 +299,8 @@ article.yt-lite {
 }
 
 .accordion-item-header {
-  font-size: 1.5rem;
+  display: flex;
+  margin-left: 1rem;
   font-weight: bold;
   padding: 1rem;
   cursor: pointer;
@@ -298,23 +311,53 @@ article.yt-lite {
   transition:
     0.333s background-color,
     0.333s color;
+  border-radius: 1.5rem;
 
   &:hover {
     background-color: var(--accent-color);
     color: var(--background);
   }
 
+  div {
+    word-wrap: anywhere;
+    font-size: 1.25rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
   .accordion-item-header-icon {
     transition: all 0.333s;
-    transform: rotate(180deg);
     margin-left: 0.5rem;
+    align-self: center;
+
+    &.item-header-hovered {
+      color: var(--accordion-item-header-icon-color);
+    }
+  }
+
+  &.active {
+    .accordion-item-header-icon {
+      transform: rotate(-180deg);
+    }
   }
 }
 
 .accordion-item-content-container {
-  width: 100%;
   overflow: hidden;
-  border: 1px solid #ccc;
+
+  margin-left: 1rem;
+  margin-right: 0;
+  padding-top: 2rem;
+  position: relative;
+  top: -2rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  box-shadow: 0 0 1rem var(--accordion-item-content-container-box-shadow-color);
+  z-index: -1;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .accordion-item-content {
@@ -332,7 +375,7 @@ article.yt-lite {
 
 #tsparticles {
   position: absolute;
-  z-index: -1;
+  z-index: -2;
 }
 
 nav.top-nav {
@@ -356,13 +399,14 @@ nav.top-nav {
         white-space: nowrap;
         color: var(--foreground);
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           text-decoration: underline;
         }
       }
     }
   }
-  
+
   .active-nav-item {
     background-color: var(--accent-color);
   }
@@ -442,7 +486,7 @@ p {
   font-weight: bold;
   background-color: #ffd140;
   color: #000000;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.25rem;
   cursor: pointer;
