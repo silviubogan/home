@@ -2,7 +2,12 @@
 
 import React, { useMemo } from "react";
 import Particles, { ParticlesProvider } from "@tsparticles/react";
-import { type Engine, type ISourceOptions, MoveDirection, OutMode } from "@tsparticles/engine";
+import {
+  type Engine,
+  type ISourceOptions,
+  MoveDirection,
+  OutMode,
+} from "@tsparticles/engine";
 // import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
@@ -51,10 +56,10 @@ export const MyParticles: React.FC = () => {
       },
       particles: {
         color: {
-          value: "#dddddd",
+          value: "#333",
         },
         links: {
-          color: "#dddddd",
+          color: "#333",
           distance: 150,
           enable: true,
           opacity: 0.5,
@@ -79,7 +84,7 @@ export const MyParticles: React.FC = () => {
             //   enable: true,
             // },
           },
-          value: 100,
+          value: 75,
         },
         opacity: {
           value: 0.5,

@@ -1,28 +1,33 @@
 "use client";
 
-import { ThemeSwitcher } from '@/components/ThemeSwitcher';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import cx from 'classnames';
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import cx from "classnames";
 
 const links = {
-  "Acasă": "/",
+  Acasă: "/",
   "Lecție React": "/lectie-react",
 };
 
 export default function NavMenu() {
   const pn = usePathname();
 
-  return <nav className='top-nav'>
-    <ul>
-      {
-        Object.entries(links).map(([name, href]) => (
-          <li key={href} className={cx({ "active-nav-item": pn === href })} >
-            <Link href={href} className={cx({ "active-nav-link": pn === href })}>{name}</Link>
+  return (
+    <nav className="top-nav">
+      <ul className="nav-menu-list">
+        {Object.entries(links).map(([name, href]) => (
+          <li key={href} className={cx({ "active-nav-item": pn === href })}>
+            <Link
+              href={href}
+              className={cx({ "active-nav-link": pn === href })}
+            >
+              {name}
+            </Link>
           </li>
-        ))
-      }
-      <ThemeSwitcher />
-    </ul>
-  </nav>;
+        ))}
+        <ThemeSwitcher />
+      </ul>
+    </nav>
+  );
 }
