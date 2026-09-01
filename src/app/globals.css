@@ -10,6 +10,7 @@
     --light-accent-color
   );
   --nav-menu-border-width: 0.3rem;
+  --blog-post-container-background-color: lightyellow;
 
   @media screen and (min-width: 768px) {
     --body-margin-left-right: 3rem;
@@ -201,6 +202,7 @@
   --accordion-item-content-container-box-shadow-color: var(
     --light-accent-color
   );
+  --blog-post-container-background-color: var(--accent-color);
 
   body {
     main {
@@ -537,7 +539,7 @@ p {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto auto;
-    background-color: var(--accent-color);
+    background-color: var(--blog-post-container-background-color);
     padding: 3rem;
 
     h3 {
