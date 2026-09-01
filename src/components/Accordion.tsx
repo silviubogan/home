@@ -17,9 +17,32 @@ const Accordion = ({
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <ol className="accordion">
+    <div className="accordion">
       {items.map((item, index) => (
-        <li key={index}>
+        <div key={index} className="accordion-item">
+          <div
+            className="accordion-item-box-shadow"
+            style={{
+              gridColumn: "2/3",
+              gridRow: "1/3",
+              boxShadow:
+                "0 0 1rem var(--accordion-item-content-container-box-shadow-color)",
+              borderRadius: "1.5rem",
+              marginLeft: "1rem",
+              marginRight: "0",
+            }}
+          ></div>
+          <div
+            className="accordion-item-index"
+            style={{
+              gridColumn: "1 / 2",
+              gridRow: "1 / 2",
+              alignSelf: "start",
+              marginTop: "1rem",
+            }}
+          >
+            {index + 1}.
+          </div>
           <div
             onClick={() => {
               const s = [...states];
@@ -32,8 +55,12 @@ const Accordion = ({
           >
             <div>{headers[index]}</div>
             <span
-              className={cx("accordion-item-header-icon", { "item-header-hovered": hoveredIndex === index })}
-            >▼</span>
+              className={cx("accordion-item-header-icon", {
+                "item-header-hovered": hoveredIndex === index,
+              })}
+            >
+              ▼
+            </span>
           </div>
           <motion.div
             initial={index === 0}
@@ -47,9 +74,9 @@ const Accordion = ({
           >
             <div className="accordion-item-content">{item}</div>
           </motion.div>
-        </li>
+        </div>
       ))}
-    </ol>
+    </div>
   );
 };
 
