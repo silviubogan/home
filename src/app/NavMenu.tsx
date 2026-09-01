@@ -7,7 +7,7 @@ import cx from "classnames";
 
 const links = {
   Acasă: "/",
-  "Lecție React": "/lectie-react",
+  Blog: "/blog",
 };
 
 export default function NavMenu() {

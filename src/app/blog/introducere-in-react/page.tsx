@@ -4,7 +4,13 @@ import CodeBlock from "@/components/CodeBlock";
 import React, { useCallback, useRef } from "react";
 import useAnchor from "react-use-anchor";
 
-function TocToggleButton({ showToc, setShowToc }: { showToc: boolean; setShowToc: () => void }) {
+function TocToggleButton({
+  showToc,
+  setShowToc,
+}: {
+  showToc: boolean;
+  setShowToc: () => void;
+}) {
   return (
     <button
       onClick={() => {
@@ -53,7 +59,9 @@ export default function Home() {
                 Therefore, visibleIds[0] will always represent the first section visible in the viewport.
               */
                 className={`${
-                  visibleIds2[0] === heading.id ? tocActiveClassName : tocInactiveClassName
+                  visibleIds2[0] === heading.id
+                    ? tocActiveClassName
+                    : tocInactiveClassName
                 }`}
               >
                 {heading.title}
@@ -70,7 +78,9 @@ export default function Home() {
                       Therefore, visibleIds[0] will always represent the first section visible in the viewport.
                     */
                       className={`${
-                        visibleIds3[0] === h.id ? tocActiveClassName : tocInactiveClassName
+                        visibleIds3[0] === h.id
+                          ? tocActiveClassName
+                          : tocInactiveClassName
                       }`}
                     >
                       {h.title}
@@ -85,6 +95,7 @@ export default function Home() {
       <div className="viewport" ref={viewPortRef}>
         <div ref={containerRef3}>
           <article ref={containerRef2}>
+            <h1>Introducere în React (în română)</h1>
             <h2 id="ce-este-react">Ce este React?</h2>
             <p>
               <strong>
@@ -251,11 +262,21 @@ async function Discursuri({ idConf }) {
                 <a href="#">Începeți cu o platformă de lucru (TODO)</a>
               </strong>
             </p>
-            
-            <h3 id="ce-este-react-folositi-ce-e-cel-mai-bun">Folosiți ce e cel mai bun din fiecare platformă</h3>
-            <p>Oamenii iubesc aplicațiile rulate în navigator și pe cele native din motive diferite. React vă permite să construiți din ambele categorii folosind aceleași abilități. Ea se sprijină pe punctele forte ale fiecărei platforme să permită interfețelor dumneavoastră să se simtă potrivit pe fiecare platformă.</p>
 
-            <h4 id="ce-este-react-ramai-fidel-navigatorului">Rămâi fidel navigatorului</h4>
+            <h3 id="ce-este-react-folositi-ce-e-cel-mai-bun">
+              Folosiți ce e cel mai bun din fiecare platformă
+            </h3>
+            <p>
+              Oamenii iubesc aplicațiile rulate în navigator și pe cele native
+              din motive diferite. React vă permite să construiți din ambele
+              categorii folosind aceleași abilități. Ea se sprijină pe punctele
+              forte ale fiecărei platforme să permită interfețelor dumneavoastră
+              să se simtă potrivit pe fiecare platformă.
+            </p>
+
+            <h4 id="ce-este-react-ramai-fidel-navigatorului">
+              Rămâi fidel navigatorului
+            </h4>
 
             <p>
               <em>Va urma.</em>
