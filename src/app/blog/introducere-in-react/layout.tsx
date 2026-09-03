@@ -1,8 +1,9 @@
 "use client";
 
-// import type { Metadata } from "next";
+import BlogHeader from "../BlogHeader";
+import BlogFooter from "../BlogFooter";
 
-import Link from "next/link";
+// import type { Metadata } from "next";
 
 // export const metadata: Metadata = {
 //   title: "Silviu Bogan (oficial)",
@@ -17,10 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <p>
-        <Link href="/blog">◀ Înapoi la blog</Link>
-      </p>
+      <BlogHeader />
       {children}
+      <BlogFooter />
     </>
   );
 }

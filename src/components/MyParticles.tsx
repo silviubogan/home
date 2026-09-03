@@ -11,6 +11,7 @@ import {
 // import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import { useTheme } from "next-themes";
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
 // TODO: use https://github.com/tsparticles/tsparticles/tree/main/wrappers/nextjs#readme
@@ -21,11 +22,12 @@ const particlesInit = async (engine: Engine) => {
 };
 
 export const MyParticles: React.FC = () => {
+  const { resolvedTheme } = useTheme();
   const options: ISourceOptions = useMemo(() => {
     return {
       background: {
         color: {
-          value: "white",
+          value: resolvedTheme === "dark" ? "rgb(0, 20, 36)" : "white",
         },
       },
       fpsLimit: 120,
@@ -56,10 +58,10 @@ export const MyParticles: React.FC = () => {
       },
       particles: {
         color: {
-          value: "#333",
+          value: "#333333",
         },
         links: {
-          color: "#333",
+          color: "#333333",
           distance: 150,
           enable: true,
           opacity: 0.5,
@@ -98,7 +100,7 @@ export const MyParticles: React.FC = () => {
       },
       detectRetina: true,
     };
-  }, []);
+  }, [resolvedTheme]);
 
   return (
     <ParticlesProvider init={particlesInit}>
