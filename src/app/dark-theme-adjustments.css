@@ -1,0 +1,62 @@
+:root[data-theme="dark"] {
+  --background: rgb(0, 20, 36);
+  --light-accent-color: lightblue;
+  --foreground: white;
+  --accent-color: rgb(24, 79, 125);
+  --headers-color: white;
+  --accordion-item-header-icon-color: blue;
+  --accordion-item-content-container-box-shadow-color: var(
+    --light-accent-color
+  );
+  --blog-post-container-background-color: var(--accent-color);
+
+  body {
+    main {
+      color: var(--foreground);
+    }
+
+    li::marker {
+      color: var(--light-accent-color);
+    }
+
+    a {
+      color: var(--light-accent-color);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .theme-switcher {
+      .menu-button {
+        color: white;
+        background-color: #333;
+        border: var(--nav-menu-border-width) solid green;
+
+        &:hover,
+        &.active {
+          background-color: green;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .gh-icon {
+    fill: white;
+  }
+
+  .wpd-icon {
+    background-color: white;
+  }
+
+  .fb-icon {
+    background-color: white;
+  }
+
+  .accordion-item-header {
+    &:hover {
+      background-color: var(--foreground);
+    }
+  }
+}

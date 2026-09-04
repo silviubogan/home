@@ -38,8 +38,8 @@ export default function RootLayout({
             <Link href="/">
               <Image
                 src="avatar.jpg"
-                width={467 / 3}
-                height={467 / 3}
+                width={155}
+                height={155}
                 alt="avatar"
                 className="photo-logo"
                 loading="eager"
