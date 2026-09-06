@@ -15,6 +15,7 @@
   --nav-menu-border-width: 0.3rem;
   --blog-post-container-background-color: lightyellow;
   --menu-drop-shadow-color: gray;
+  --mobile-nav-button-background: var(--light-accent-color);
 
   @media screen and (min-width: 768px) {
     --body-margin-left-right: 3rem;
@@ -252,8 +253,7 @@
         margin: 0;
         width: 5rem;
         border: none;
-        background: none;
-        background: var(--accent-color);
+        background: var(--mobile-nav-button-background);
         color: var(--foreground);
         anchor-name: --mobile-menu-button;
         cursor: pointer;

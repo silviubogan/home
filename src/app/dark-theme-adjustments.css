@@ -10,6 +10,7 @@
   );
   --blog-post-container-background-color: var(--accent-color);
   --menu-drop-shadow-color: var(--background);
+  --mobile-nav-button-background: var(--accent-color);
 
   body {
     main {
