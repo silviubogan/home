@@ -7,6 +7,7 @@ import { MyParticles } from "@/components/MyParticles";
 import Footer from "./Footer";
 import Link from "next/link";
 import { ThemeProvider } from "next-themes";
+import { assetUrl } from "@/lib/assetUrl";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +38,7 @@ export default function RootLayout({
           <header>
             <Link href="/">
               <Image
-                src="/avatar.jpg"
+                src={assetUrl("/avatar.jpg")}
                 width={155}
                 height={155}
                 alt="avatar"
