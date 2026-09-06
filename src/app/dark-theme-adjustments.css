@@ -9,6 +9,7 @@
     --light-accent-color
   );
   --blog-post-container-background-color: var(--accent-color);
+  --menu-drop-shadow-color: var(--background);
 
   body {
     main {

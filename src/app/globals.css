@@ -14,6 +14,7 @@
   );
   --nav-menu-border-width: 0.3rem;
   --blog-post-container-background-color: lightyellow;
+  --menu-drop-shadow-color: gray;
 
   @media screen and (min-width: 768px) {
     --body-margin-left-right: 3rem;
@@ -200,7 +201,7 @@
         display: none;
         margin-top: 1rem;
         margin-right: -0.25rem;
-        filter: drop-shadow(0 0 0.5rem black);
+        filter: drop-shadow(0 0 0.5rem var(--menu-drop-shadow-color));
 
         ul.nav-menu-list {
           flex-direction: column;
@@ -243,20 +244,24 @@
         }
       }
       .mobile-menu {
-        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
         margin: 0;
-        width: 3rem;
+        width: 5rem;
         border: none;
         background: none;
+        background: var(--accent-color);
         color: var(--foreground);
         anchor-name: --mobile-menu-button;
+        cursor: pointer;
+        padding: 1rem;
+        border-radius: 50%;
 
         hr {
-          width: 100%;
           border: 0.15rem solid var(--foreground);
           border-radius: 1rem;
-          margin: 0;
-          margin-bottom: 0.3rem;
+          margin: 0 0 0 0;
         }
       }
 
@@ -468,12 +473,19 @@ nav.mobile-nav {
       text-align: center;
 
       border-top: var(--nav-menu-border-width) solid var(--accent-color);
+      border-bottom: var(--nav-menu-border-width) solid var(--accent-color);
       border-left: var(--nav-menu-border-width) solid var(--accent-color);
       border-right: var(--nav-menu-border-width) solid var(--accent-color);
 
-      &:first-of-type {
+      &:first-child {
         border-top-left-radius: 50%;
         border-bottom-left-radius: 50%;
+        border-right: none;
+      }
+
+      &:not(:first-child) {
+        border-left: none;
+        border-right: none;
       }
 
       a {
