@@ -37,7 +37,7 @@ export default function RootLayout({
           <header>
             <Link href="/">
               <Image
-                src="avatar.jpg"
+                src="/avatar.jpg"
                 width={155}
                 height={155}
                 alt="avatar"
