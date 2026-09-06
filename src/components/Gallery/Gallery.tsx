@@ -15,6 +15,7 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 import { renderNextImage } from "./renderNextImage";
+import { assetUrl } from "@/lib/assetUrl";
 
 export const Gallery: FC<{ images?: MyPhoto[] }> = ({
   images,
@@ -27,11 +28,16 @@ export const Gallery: FC<{ images?: MyPhoto[] }> = ({
     return <></>;
   }
 
+  const photos = images.map((image) => ({
+    ...image,
+    src: assetUrl(image.src),
+  }));
+
   return (
     <>
       <MasonryPhotoAlbum
-        key={images[0].src}
-        photos={images.map((x) => ({
+        key={photos[0].src}
+        photos={photos.map((x) => ({
           src: x.src,
           width: x.width || 0,
           height: x.height || 0,
@@ -41,8 +47,8 @@ export const Gallery: FC<{ images?: MyPhoto[] }> = ({
         render={{ image: renderNextImage }}
       />
       <Lightbox
-        key={images[0].src + "_lightbox"}
-        slides={images}
+        key={photos[0].src + "_lightbox"}
+        slides={photos}
         open={idx >= 0}
         index={idx}
         close={() => setIdx(-1)}
