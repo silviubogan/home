@@ -611,3 +611,8 @@ p {
     }
   }
 }
+
+div.patreon-link {
+  display: flex;
+  justify-content: center;
+}
