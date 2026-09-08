@@ -61,7 +61,6 @@ export default function RootLayout({
             </h1>
             <NavMenu />
           </header>
-          <div className="header-footer-separator" />
           {children}
           <div className="header-footer-separator" />
           <Footer />
