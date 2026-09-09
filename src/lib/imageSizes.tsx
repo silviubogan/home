@@ -17,7 +17,7 @@ import {
 } from "@/lib/images";
 import { imageSizeFromFile } from "image-size/fromFile";
 
-import { existsSync, mkdirSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { writeFile } from "node:fs/promises";
 import { Readable } from "node:stream";
 import { join } from "node:path";
@@ -59,7 +59,7 @@ export const isUrl = (l: string) => {
 
 export const getImages = async (): Promise<MyImages> => {
   const fill = async (x: MyPhoto) => {
-    const path = join('public', x.src);
+    const path = join("public", x.src);
     const d = await imageSizeFromFile(path);
     x.width = d.width;
     x.height = d.height;
@@ -101,6 +101,13 @@ export const getImages = async (): Promise<MyImages> => {
     return arr3;
   };
 
+  const outputPath = "src/lib/imageSizesData.json";
+
+  if (existsSync(outputPath)) {
+    const data = readFileSync(outputPath, "utf-8");
+    return JSON.parse(data);
+  }
+
   const obj = {
     poze: await map(poze),
     pozeJoc: await map(pozeJoc),
@@ -116,6 +123,7 @@ export const getImages = async (): Promise<MyImages> => {
     articoleBlogVechi: await map(articoleBlogVechi),
     diplome: await map(diplome),
   };
+  writeFileSync(outputPath, JSON.stringify(obj, null, 2));
 
   return obj;
 };

@@ -1,0 +1,534 @@
+{
+  "poze": [
+    {
+      "src": "https://i.imgur.com/BjPWmEC.jpeg",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "src": "https://i.imgur.com/dZrFUhH.jpeg",
+      "width": 3456,
+      "height": 4608
+    }
+  ],
+  "pozeJoc": [
+    {
+      "src": "educationalmemoryblocks_2019-07-28_16-04-31.png",
+      "width": 1366,
+      "height": 768
+    },
+    {
+      "src": "educationalmemoryblocks_2019-07-28_16-06-28.png",
+      "width": 1366,
+      "height": 768
+    },
+    {
+      "src": "educationalmemoryblocks_2019-07-28_16-06-38.png",
+      "width": 1366,
+      "height": 768
+    },
+    {
+      "src": "educationalmemoryblocks_2019-07-28_16-07-32.png",
+      "width": 1366,
+      "height": 768
+    },
+    {
+      "src": "educationalmemoryblocks_2019-08-16_14-16-31.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "educationalmemoryblocks_2019-08-16_14-18-05.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "educationalmemoryblocks_2019-08-16_14-19-17.png",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "deseneManuale": [
+    {
+      "src": "lucru desen/Imagine-0001.png",
+      "width": 3508,
+      "height": 2552
+    },
+    {
+      "src": "lucru desen/Imagine-0003.png",
+      "width": 3508,
+      "height": 2552
+    },
+    {
+      "src": "lucru desen/2/Imagine-0002.png",
+      "width": 3508,
+      "height": 2552
+    },
+    {
+      "src": "desene originale/14.jpg",
+      "width": 720,
+      "height": 900
+    },
+    {
+      "src": "desene originale/15.jpg",
+      "width": 720,
+      "height": 900
+    },
+    {
+      "src": "desene originale/16.jpg",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "desene originale/17.jpg",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "https://i.imgur.com/OBIJxTY.jpeg",
+      "width": 3456,
+      "height": 4608
+    },
+    {
+      "src": "https://i.imgur.com/L1esgq4.jpeg",
+      "width": 3456,
+      "height": 4608
+    },
+    {
+      "src": "https://i.imgur.com/jQoNfHT.jpeg",
+      "width": 3508,
+      "height": 2552
+    },
+    {
+      "src": "https://i.imgur.com/ZG2nlpO.jpeg",
+      "width": 2552,
+      "height": 3508
+    },
+    {
+      "src": "https://i.imgur.com/TFK45qv.jpeg",
+      "width": 3508,
+      "height": 2552
+    },
+    {
+      "src": "https://i.imgur.com/hw3YPWO.jpeg",
+      "width": 2552,
+      "height": 3508
+    },
+    {
+      "src": "https://i.imgur.com/kzhTGcF.jpeg",
+      "width": 3508,
+      "height": 2552
+    },
+    {
+      "src": "https://i.imgur.com/brCiwjP.jpeg",
+      "width": 3508,
+      "height": 2552
+    },
+    {
+      "src": "https://i.imgur.com/pdwtDe2.jpeg",
+      "width": 3508,
+      "height": 2552
+    },
+    {
+      "src": "https://i.imgur.com/KUVBrFu.jpeg",
+      "width": 3508,
+      "height": 2552
+    },
+    {
+      "src": "https://i.imgur.com/MXs4zdW.jpeg",
+      "width": 3508,
+      "height": 2552
+    },
+    {
+      "src": "https://i.imgur.com/B1AuFaJ.jpeg",
+      "width": 3508,
+      "height": 2480
+    },
+    {
+      "src": "https://i.imgur.com/ah0MgOV.jpeg",
+      "width": 3508,
+      "height": 2480
+    },
+    {
+      "src": "https://i.imgur.com/nlU3uiK.jpeg",
+      "width": 3508,
+      "height": 2480
+    },
+    {
+      "src": "https://i.imgur.com/6UmrEtW.jpeg",
+      "width": 3508,
+      "height": 2480
+    },
+    {
+      "src": "https://i.imgur.com/PPiYBa8.jpeg",
+      "width": 3508,
+      "height": 2480
+    },
+    {
+      "src": "https://i.imgur.com/RIvCcyP.jpeg",
+      "width": 3508,
+      "height": 2480
+    },
+    {
+      "src": "https://i.imgur.com/SiPsJJA.jpeg",
+      "width": 7015,
+      "height": 4960
+    },
+    {
+      "src": "https://i.imgur.com/99J2CsY.jpeg",
+      "width": 3508,
+      "height": 2552
+    },
+    {
+      "src": "https://i.imgur.com/l50vZZV.jpeg",
+      "width": 3508,
+      "height": 2480
+    }
+  ],
+  "screenshot": [
+    {
+      "src": "example-screen.png",
+      "alt": "captură de ecran",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "deseneDigitaleOriginale": [
+    {
+      "src": "desene originale/1.jpg",
+      "width": 720,
+      "height": 900
+    },
+    {
+      "src": "desene originale/2.jpg",
+      "width": 720,
+      "height": 900
+    },
+    {
+      "src": "desene originale/3.jpg",
+      "width": 720,
+      "height": 900
+    },
+    {
+      "src": "desene originale/4.jpg",
+      "width": 720,
+      "height": 900
+    },
+    {
+      "src": "desene originale/5.jpg",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "desene originale/6.jpg",
+      "width": 1080,
+      "height": 1067
+    },
+    {
+      "src": "desene originale/7.jpg",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "desene originale/8.jpg",
+      "width": 1080,
+      "height": 1132
+    },
+    {
+      "src": "desene originale/9.jpg",
+      "width": 1080,
+      "height": 675
+    },
+    {
+      "src": "desene originale/10.jpg",
+      "width": 720,
+      "height": 900
+    },
+    {
+      "src": "desene originale/11.jpg",
+      "width": 720,
+      "height": 900
+    },
+    {
+      "src": "desene originale/12.jpg",
+      "width": 720,
+      "height": 900
+    },
+    {
+      "src": "desene originale/13.jpg",
+      "width": 720,
+      "height": 900
+    },
+    {
+      "src": "https://i.imgur.com/MQrsRzE.jpeg",
+      "width": 1023,
+      "height": 421
+    },
+    {
+      "src": "https://i.imgur.com/d7Fnbdn.png",
+      "width": 1600,
+      "height": 2560
+    }
+  ],
+  "graficăÎnGimp": [
+    {
+      "src": "https://i.imgur.com/pJN0nSp.jpeg",
+      "width": 216,
+      "height": 233
+    },
+    {
+      "src": "https://i.imgur.com/uy8k5cB.jpeg",
+      "width": 550,
+      "height": 550
+    },
+    {
+      "src": "https://i.imgur.com/g3JbJiP.jpeg",
+      "width": 163,
+      "height": 153
+    },
+    {
+      "src": "https://i.imgur.com/9VwapnI.jpeg",
+      "width": 850,
+      "height": 250
+    },
+    {
+      "src": "https://i.imgur.com/DS9Uwh9.jpeg",
+      "width": 850,
+      "height": 250
+    }
+  ],
+  "temeWordPress": [
+    {
+      "src": "https://i.imgur.com/KbbriSx.png",
+      "width": 1211,
+      "height": 851
+    },
+    {
+      "src": "https://i.imgur.com/TBsogAO.png",
+      "width": 1199,
+      "height": 773
+    },
+    {
+      "src": "https://i.imgur.com/Bw12Grt.png",
+      "width": 566,
+      "height": 700
+    },
+    {
+      "src": "https://i.imgur.com/CqhoPnl.png",
+      "width": 1261,
+      "height": 813
+    }
+  ],
+  "artă": [
+    {
+      "src": "https://i.imgur.com/rcyplGP.jpeg",
+      "width": 2048,
+      "height": 1536
+    }
+  ],
+  "artăCss": [
+    {
+      "src": "https://i.imgur.com/jkEv2CH.png",
+      "width": 1182,
+      "height": 3964
+    }
+  ],
+  "pozeJocSnake": [
+    {
+      "src": "https://i.imgur.com/DeNb68o.png",
+      "width": 1637,
+      "height": 934
+    },
+    {
+      "src": "https://i.imgur.com/HZPOUu0.png",
+      "width": 1625,
+      "height": 946
+    }
+  ],
+  "afacereWordPress": [
+    {
+      "src": "https://i.imgur.com/iFeHPmk.png",
+      "width": 683,
+      "height": 761
+    },
+    {
+      "src": "https://i.imgur.com/Uxumnup.png",
+      "width": 1604,
+      "height": 733
+    },
+    {
+      "src": "https://i.imgur.com/J3H6UQe.png",
+      "width": 1575,
+      "height": 931
+    },
+    {
+      "src": "https://i.imgur.com/3BTAvdM.png",
+      "width": 1323,
+      "height": 948
+    },
+    {
+      "src": "https://i.imgur.com/qhRBESI.png",
+      "width": 1675,
+      "height": 939
+    },
+    {
+      "src": "https://i.imgur.com/jt5CKj0.png",
+      "width": 1920,
+      "height": 575
+    },
+    {
+      "src": "https://i.imgur.com/5dK6QAZ.png",
+      "width": 1508,
+      "height": 862
+    },
+    {
+      "src": "https://i.imgur.com/zKB2vvL.png",
+      "width": 1566,
+      "height": 898
+    },
+    {
+      "src": "https://i.imgur.com/BDCvb5q.png",
+      "width": 1188,
+      "height": 656
+    },
+    {
+      "src": "https://i.imgur.com/AfZD9OK.png",
+      "width": 1317,
+      "height": 770
+    },
+    {
+      "src": "https://i.imgur.com/5cRNfqh.png",
+      "width": 1315,
+      "height": 710
+    },
+    {
+      "src": "https://i.imgur.com/BSaX04p.png",
+      "width": 1630,
+      "height": 354
+    },
+    {
+      "src": "https://i.imgur.com/AbrDfOW.png",
+      "width": 1132,
+      "height": 413
+    }
+  ],
+  "articoleBlogVechi": [
+    {
+      "src": "https://i.imgur.com/cri2fqY.png",
+      "width": 1411,
+      "height": 25796
+    }
+  ],
+  "diplome": [
+    {
+      "src": "https://i.imgur.com/yuGiAvS.jpeg",
+      "width": 1600,
+      "height": 1131
+    },
+    {
+      "src": "https://i.imgur.com/pKnKw9j.jpeg",
+      "width": 1600,
+      "height": 1131
+    },
+    {
+      "src": "https://i.imgur.com/dWSRdhQ.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/infkWtM.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/8V4rUob.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/Smcx9WK.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/QtAjDGf.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/KGLbiZh.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/Qi7VYDb.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/RAh9LJ6.jpeg",
+      "width": 1600,
+      "height": 1131
+    },
+    {
+      "src": "https://i.imgur.com/kXfhSX9.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/7kOVFRc.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/7i3rwPd.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/1XXMXmB.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/EznqfIv.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/mal64rD.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/HkxUAOd.jpeg",
+      "width": 1600,
+      "height": 1131
+    },
+    {
+      "src": "https://i.imgur.com/cB0fkgu.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/33d1WLZ.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/G4b0Sud.jpeg",
+      "width": 1600,
+      "height": 1130
+    },
+    {
+      "src": "https://i.imgur.com/6zl9kh7.jpeg",
+      "width": 1131,
+      "height": 1600
+    },
+    {
+      "src": "https://i.imgur.com/WctuR2k.jpeg",
+      "width": 1131,
+      "height": 1600
+    }
+  ]
+}
