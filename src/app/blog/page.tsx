@@ -23,24 +23,30 @@ const BlogPost = ({
   return (
     <article>
       <h3>
-        <Link href={linkUrl}>{title}</Link>
+        <Link href={linkUrl} prefetch={false}>
+          {title}
+        </Link>
       </h3>
       <section>
-        <Link href={linkUrl}>{summary}</Link>
+        <Link href={linkUrl} prefetch={false}>
+          {summary}
+        </Link>
         <p>
-          <Link href={linkUrl}>
+          <Link href={linkUrl} prefetch={false}>
             <small>{postedOn}</small>
           </Link>
         </p>
       </section>
-      <Link href={linkUrl} className="thumbnail">
-        <img
-          src={thumbnailUrl}
-          alt={title}
-          // width={(150 * 4) / 3}
-          // height={(150 * 3) / 3}
-          style={{ height: "10rem", width: "auto", maxWidth: "10rem" }}
-        />
+      <Link href={linkUrl} className="thumbnail" prefetch={false}>
+        {typeof thumbnailUrl === "string" && thumbnailUrl.length > 0 ? (
+          <img
+            src={thumbnailUrl}
+            alt={title}
+            // width={(150 * 4) / 3}
+            // height={(150 * 3) / 3}
+            style={{ height: "10rem", width: "auto", maxWidth: "10rem" }}
+          />
+        ) : null}
       </Link>
     </article>
   );

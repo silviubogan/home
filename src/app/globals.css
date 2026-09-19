@@ -655,3 +655,26 @@ div.patreon-link {
     scroll-margin-top: 9rem;
   }
 }
+
+/* Move these styles to the CMMDC blog post only */
+.scene {
+  min-height: 50vh;
+  border: 0.1rem solid blue;
+  overflow: auto;
+  display: flex;
+  padding: 3rem;
+  justify-content: space-evenly;
+}
+tbody tr {
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  &.active {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
