@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import Link from "next/link";
 import { ThemeProvider } from "next-themes";
 import { assetUrl } from "@/lib/assetUrl";
+import { ProgressBar } from "./ProgressBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
+          <ProgressBar />
           <header>
             <Link href="/">
               <Image
