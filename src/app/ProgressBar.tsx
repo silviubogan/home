@@ -11,10 +11,13 @@ export const ProgressBar = ({}) => {
 
   const matchRef = useRef<MediaQueryList>(null);
   useEffect(() => {
+    // use this MediaQueryList object from the global scope
+    // because it evaluates only when read with the matches property,
+    // so there is no need to use a ref
     matchRef.current = window.matchMedia("(min-width: 768px)");
-    setMatches(!matchRef.current?.matches!);
+    setMatches(!matchRef.current.matches!);
     matchRef.current.addEventListener("change", () => {
-      setMatches(!matchRef.current?.matches!);
+      setMatches(!matchRef.current!.matches!);
     });
     return () => {
       matchRef.current = null;

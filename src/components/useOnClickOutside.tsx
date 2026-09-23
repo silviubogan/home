@@ -1,12 +1,14 @@
-import { RefObject, useEffect } from 'react';
+"use client";
+
+import { RefObject, useEffect } from "react";
 
 export function useOnClickOutside<T extends HTMLElement>(
   refs: RefObject<T>[],
   handler: (event: Event) => void,
-  options?: { events?: string[] }
+  options?: { events?: string[] },
 ) {
   useEffect(() => {
-    const events = options?.events ?? ['pointerdown'];
+    const events = options?.events ?? ["pointerdown"];
     const listener = (event: Event) => {
       let doHide = true;
       for (const ref of refs) {
@@ -14,8 +16,12 @@ export function useOnClickOutside<T extends HTMLElement>(
         if (!el) continue;
 
         // Support Shadow DOM
-        const path = (event as { composedPath?: () => EventTarget[] }).composedPath?.() as EventTarget[] | undefined;
-        const clickedInside = path ? path.includes(el) : el.contains(event.target as Node);
+        const path = (
+          event as { composedPath?: () => EventTarget[] }
+        ).composedPath?.() as EventTarget[] | undefined;
+        const clickedInside = path
+          ? path.includes(el)
+          : el.contains(event.target as Node);
         if (!clickedInside) {
           doHide &&= true;
         } else {

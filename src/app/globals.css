@@ -648,7 +648,9 @@ div.patreon-link {
 
 /* h2 and h3 elements for TOC of blog posts */
 .viewport h2,
-.viewport h3 {
+.viewport h3,
+.columns {
+  /* TODO move this style to the section with CMMDC blog post styles, use CSS variables for remembering the values */
   scroll-margin-top: 7rem;
 
   @media screen and (min-width: 768px) {
@@ -658,23 +660,58 @@ div.patreon-link {
 
 /* Move these styles to the CMMDC blog post only */
 .scene {
-  min-height: 50vh;
+  max-height: 75vh;
   border: 0.1rem solid blue;
   overflow: auto;
   display: flex;
-  padding: 3rem;
+  padding: 1rem;
   justify-content: space-evenly;
-}
-tbody tr {
-  cursor: pointer;
+  flex-direction: column;
 
-  &:hover {
-    background-color: var(--background);
-    color: var(--foreground);
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
   }
 
-  &.active {
-    background-color: var(--background);
-    color: var(--foreground);
+  & > div.columns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-grow: 1;
+    border-bottom: 0.1rem solid blue;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    max-height: 10rem;
+    overflow-y: auto;
+
+    @media screen and (min-width: 768px) {
+      border-bottom: none;
+      max-height: 75vh;
+      overflow-y: unset;
+    }
+  }
+
+  & > aside > table {
+    overflow-y: scroll;
+    max-height: 10rem;
+    display: block;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      max-height: 75vh;
+    }
+  }
+
+  & > aside > table > tbody > tr {
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--background);
+      color: var(--foreground);
+    }
+
+    &.active {
+      background-color: var(--background);
+      color: var(--foreground);
+    }
   }
 }

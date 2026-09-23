@@ -1,7 +1,7 @@
 "use client";
 
 import CodeBlock from "@/components/CodeBlock";
-import { useCallback } from "react";
+import { useCallback, useRef } from "react";
 import { useMemo, useState } from "react";
 import Column from "./Column";
 import { Step } from "./types";
@@ -59,6 +59,10 @@ const Play = () => {
     setStepIndex(newStepIndex);
   }, [stepIndex, runResult]);
 
+  const columnsRef = useRef<HTMLDivElement>(null);
+  const col1Ref = useRef<HTMLDivElement>(null);
+  const col2Ref = useRef<HTMLDivElement>(null);
+
   return (
     <div>
       <Toolbar
@@ -74,13 +78,23 @@ const Play = () => {
       />
       <p>Pasul curent: {observation}.</p>
       <div className="scene">
-        <Column variableName="a" units={demoA} />
-        <Column variableName="b" units={demoB} />
+        <div className="columns" ref={columnsRef}>
+          <Column variableName="a" units={demoA} ref={col1Ref} />
+          <Column variableName="b" units={demoB} ref={col2Ref} />
+        </div>
         <StepsDisplay
           stepIndex={stepIndex}
           runResult={runResult}
           onChange={(i) => {
             setStepIndex(i);
+            setTimeout(() => {
+              col1Ref.current?.scrollIntoView({
+                behavior: "instant",
+              });
+              columnsRef.current?.scrollIntoView({
+                behavior: "instant",
+              });
+            });
           }}
         />
       </div>
@@ -107,6 +121,11 @@ export default function Home() {
           b := b − a
   întoarce a`}
         />
+        <p>
+          Mai jos vă puteți juca cu algoritmul lui Euclid. Pagina este încă în
+          lucru pentru noi facilități. Pentru mai multe detalii despre CMMDC și
+          Algoritmul lui Euclid, vizitați Wikipedia.
+        </p>
         <Play />
       </section>
     </>

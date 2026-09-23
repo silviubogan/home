@@ -58,6 +58,7 @@ export const isUrl = (l: string) => {
 };
 
 export const getImages = async (): Promise<MyImages> => {
+  "use cache";
   const fill = async (x: MyPhoto) => {
     const path = join("public", x.src);
     const d = await imageSizeFromFile(path);

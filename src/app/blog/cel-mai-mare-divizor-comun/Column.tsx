@@ -1,18 +1,22 @@
-import { Fragment } from "react";
+import { Fragment, RefObject } from "react";
+
+const unitMinHeight = "2rem";
 
 const Column = ({
   variableName,
   units,
+  ref,
 }: {
   variableName: string;
   units: number;
+  ref: RefObject<null | HTMLDivElement>;
 }) => {
-  let col1Render = [];
+  const col1Render = [];
   col1Render.push(
     <div
       key="variable-name"
       style={{
-        fontSize: "5rem",
+        fontSize: "2rem",
       }}
     >
       {variableName}
@@ -22,7 +26,7 @@ const Column = ({
     <div
       key="first-horizontal-border"
       style={{
-        width: "5rem",
+        width: "3rem",
         borderTop: "0.25rem solid var(--foreground)",
       }}
     ></div>,
@@ -32,14 +36,14 @@ const Column = ({
       <Fragment key={i}>
         <div
           style={{
-            height: "3rem",
+            minHeight: unitMinHeight,
             width: "0.25rem",
             backgroundColor: "var(--foreground)",
           }}
         ></div>
         <div
           style={{
-            width: "5rem",
+            width: "3rem",
             borderBottom: "0.25rem solid var(--foreground)",
           }}
         ></div>
@@ -49,12 +53,13 @@ const Column = ({
 
   return (
     <div
-      className="col-1"
+      className="col"
       style={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
       }}
+      ref={ref}
     >
       {col1Render}
     </div>

@@ -1,5 +1,6 @@
 export type Step = {
   type:
+    | "start"
     | "the-end-b-is-cmmdc"
     | "while-b-not-0-start"
     | "a > b === true"

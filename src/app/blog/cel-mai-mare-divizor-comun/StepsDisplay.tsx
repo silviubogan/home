@@ -1,4 +1,3 @@
-import { steps } from "framer-motion";
 import { observationText } from "./cmmdc";
 import { Step } from "./types";
 
