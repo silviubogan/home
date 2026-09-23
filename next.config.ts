@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true },
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || undefined,
-  cacheComponents: true,
   // allowedDevOrigins: ["i.imgur.com"], // not working in Chrome, in FF not
   // needed
 };
